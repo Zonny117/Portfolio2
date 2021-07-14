@@ -26,20 +26,30 @@ a {
 }
 
 /* [스크롤바 가로크기] */
-::-webkit-scrollbar {width: 8px;}
+::-webkit-scrollbar {
+    width: 8px;
+}
 
 /* [스크롤바 배경색, 모서리 둥글게] */
-::-webkit-scrollbar-thumb {background: #666; border-radius: 10px;}
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 10px;
+}
 
 /* [스크롤바 트랙 배경색, 모서리 둥글게] */
-::-webkit-scrollbar-track {background: #ddd; border-radius: 5px;}
+::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 5px;
+}
 
 
 /* 배경화면 세팅 */
 body {
     position: relative;
     width: 100%;
+    min-width: 760px;
     height: 100%;
+    font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
     background: url(../images/bg.jpg) no-repeat fixed top/cover;
 }
 
@@ -49,7 +59,18 @@ body::before {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.226);
+    background-color: rgba(0, 0, 0, 0.226); /* 애니메이션할때 이거 지워야된다 까먹지마셈*/
+    /* animation: body 3s ease-in forwards; */
+}
+
+@keyframes body {
+    from {
+        background-color: rgb(216, 216, 216);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.226);
+    }
 }
 
 
@@ -60,7 +81,25 @@ section {
     height: 2000px;
 }
 
+/* 임시 테두리 */
+main,
+section,
+footer {
+    outline: 2px dashed #ccc;
+}
+
+
+
+
 /*///////////////////////////////////////////////// 상단영역 /////////////////////////////////*/
+.mainbx {
+    position: relative;
+    width: 100%;
+    min-width: 760px;
+    height: 100vh;
+}
+
+
 #top {
     position: relative;
     display: flex;
@@ -71,7 +110,7 @@ section {
     z-index: 999;
 }
 
-/* 메인로고 */
+/* 상단로고 */
 .mlogo {
     padding: 10px;
     box-sizing: border-box;
@@ -84,6 +123,49 @@ section {
     line-height: 54px;
 }
 
+/* 메인로고 */
+.biglogo {
+    position: relative;
+    width: calc(100% - 16.66%);
+    /* calc 띄어쓰기 주의 */
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.biglogo img {
+    position: absolute;
+    display: block;
+    width: 45vw;
+    top: 61vh;
+    opacity: 1;
+    /* animation: bimg .5s ease-in 3s forwards; */
+}
+
+@keyframes bimg {
+    to {
+        opacity: 1;
+    }
+}
+
+.biglogo span {
+    position: absolute;
+    left: 46%;
+    top: 61vh;
+    opacity: 1;
+    float: right;
+    font-size: 2.08vw;
+    color: #fff;
+    letter-spacing: -2px;
+    /* animation: bspan .5s ease-in-out 3.3s forwards; */
+}
+
+@keyframes bspan {
+    to {
+        /* right: -84px;  left %로 수정할 예정*/
+        opacity: 1;
+    }
+}
+
 /* 네비게이션 */
 .gnb {
     position: absolute;
@@ -93,7 +175,7 @@ section {
 }
 
 .gnb>li {
-    width: 80px;
+    padding-left: 21px;
     height: 100%;
     text-align: center;
 }
@@ -101,7 +183,6 @@ section {
 .gnb>li>a {
     font-weight: bold;
     line-height: 74px;
-    font-family: 'Noto Sans', sans-serif;
 }
 
 /* 스토어 */
@@ -109,11 +190,10 @@ section {
     position: absolute;
     width: 100px;
     height: 23px;
-    top: 65px;
-    right: 255px;
+    top: 68px;
+    right: 200px;
     transform: translateY(-50%);
     font-weight: bold;
-    font-family: 'Noto Sans', sans-serif;
     text-align: center;
 }
 
@@ -149,7 +229,6 @@ section {
     box-sizing: border-box;
     background-color: #000;
     text-align-last: left;
-    font-family: 'Noto Sans KR', sans-serif;
     font-size: 12px;
     line-height: 2;
     border-radius: 5px;
@@ -193,3 +272,6 @@ section {
     height: 3px;
     margin-bottom: 8px;
 }
+
+
+/* ////////////////////////////////////////// 섹션 1 ///////////////////////////////////////// */
