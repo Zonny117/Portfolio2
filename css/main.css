@@ -43,7 +43,7 @@ a {
 }
 
 
-/* 배경화면 세팅 */
+/* 배경화면 및 폰트 세팅 */
 body {
     position: relative;
     width: 100%;
@@ -203,6 +203,9 @@ footer {
     display: block;
     width: 100%;
     height: 60px;
+    cursor: pointer;
+    outline: 1px dotted blue;
+    padding-right: 35px;
 }
 
 /* 스토어 화살표 아이콘 가상요소 */
@@ -224,21 +227,25 @@ footer {
 .store ol {
     position: absolute;
     top: 55px;
+    left: 0;
     width: 200px;
-    height: 80px;
-    padding: 15px;
     box-sizing: border-box;
     background-color: #000;
-    text-align-last: left;
+    text-align: left;
     font-size: 12px;
     line-height: 2;
     border-radius: 5px;
+    
+
+
     opacity: 0;
+    height: 0;
+    overflow: hidden;
     transition: opacity .6s ease-in-out;
 }
 
 /* 스토어 서브메뉴 박스 상단 삼각형 */
-.store ol:before {
+.store ol::before {
     content: '';
     position: absolute;
     top: -9px;
@@ -252,7 +259,9 @@ footer {
 
 .store>li:hover ol {
     opacity: 1;
-
+    height: 80px;
+    padding: 15px;
+    overflow: visible;
 }
 
 /* 햄버거 버튼 */
