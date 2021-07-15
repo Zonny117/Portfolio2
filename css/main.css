@@ -1,14 +1,16 @@
 @charset "utf-8";
 
 /* 폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&family=Public+Sans:wght@200;300&display=swap');
 /* font-family: 'Noto Sans', sans-serif; */
 /* font-family: 'Noto Sans KR', sans-serif; */
+/* font-family: 'Public Sans', sans-serif; */
 
 
 body,
 html,
-h1 {
+h1,
+h2 {
     margin: 0;
     padding: 0;
 }
@@ -90,7 +92,12 @@ footer {
 }
 
 
-
+/* 양쪽 마진 공통 클래스 */
+.wid {
+    width: calc(100% - 16.33%);
+    margin: 0 auto;
+    outline: 2px dotted blue;
+}
 
 /*///////////////////////////////////////////////// 상단영역 /////////////////////////////////*/
 .mainbx {
@@ -127,10 +134,7 @@ footer {
 /* 메인로고 */
 .biglogo {
     position: relative;
-    width: calc(100% - 16.66%);
-    /* calc 띄어쓰기 주의 */
     height: 100vh;
-    margin: 0 auto;
 }
 
 .biglogo img {
@@ -138,7 +142,7 @@ footer {
     display: block;
     width: 45vw;
     top: 61vh;
-    opacity: 1;
+    opacity: 1; /* 애니메이션 작업할때 0으로 */
     /* animation: bimg .5s ease-in 3s forwards; */
 }
 
@@ -204,7 +208,6 @@ footer {
     width: 100%;
     height: 60px;
     cursor: pointer;
-    outline: 1px dotted blue;
     padding-right: 35px;
 }
 
@@ -235,7 +238,7 @@ footer {
     font-size: 12px;
     line-height: 2;
     border-radius: 5px;
-    
+
 
 
     opacity: 0;
@@ -295,9 +298,6 @@ footer {
 
 .wooheebx {
     position: relative;
-    width: calc(100% - 16.33%);
-    margin: 0 auto;
-    outline: 2px dotted blue;
 }
 
 /* 천우희 이미지 */
@@ -341,7 +341,7 @@ footer {
     transition: transform .2s ease-in-out;
 }
 
-.nstory li:nth-child(3):hover a::after {
+.nstory li:nth-child(3) a:hover::after {
     transform: scale(1.2);
 }
 
@@ -349,9 +349,6 @@ footer {
 
 .hybx {
     position: relative;
-    width: calc(100% - 16.33%);
-    margin: 0 auto;
-    outline: 2px dotted blue;
 }
 
 /* 김혜준 이미지 */
@@ -392,7 +389,7 @@ footer {
     transition: transform .2s ease-in-out;
 }
 
-.makeup li:nth-child(3):hover a::after {
+.makeup li:nth-child(3) a:hover::after {
     transform: scale(1.2);
 }
 
@@ -401,9 +398,6 @@ footer {
 
 .flowerbx {
     position: relative;
-    width: calc(100% - 16.33%);
-    margin: 0 auto;
-    outline: 2px dotted blue;
 }
 
 /* 플라워가든 이미지 */
@@ -448,9 +442,148 @@ footer {
     transition: transform .2s ease-in-out;
 }
 
-.fgtest li:nth-child(5):hover a::after {
+.fgtest li:nth-child(5) a:hover::after {
     transform: scale(1.2);
 }
 
 
 /* /////////////////////////////////////// 섹션2 ////////////////////////////////////////////////////////// */
+.facebx {
+    width: 100%;
+    height: auto;
+}
+
+.facebx2 {
+    position: relative;
+}
+
+
+/* face 컨텐츠 - 파운데이션 */
+
+.facetxt {
+    margin-top: 300px;
+    padding-right: 10vw;
+    color: #fff;
+    text-align: right;
+    letter-spacing: -0.8px;
+}
+
+.face {
+    width: 24vw;
+    margin-top: 67px;
+    padding-left: 10vw;
+}
+
+.fc1 {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 50%;
+    padding: 3.6%;
+    box-sizing: border-box;
+    width: 50%;
+    min-width: 448px;
+    min-height: 628px;
+    color: #000;
+}
+
+.fc1 a {
+    position: relative;
+    right: -7.3vw;
+    width: 31.2vw;
+    padding: 10%;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.fc1 h2 {
+    font-size: 3vw;
+    white-space: nowrap;
+}
+
+.fc1 span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    font-weight: lighter;
+}
+
+.fc1 span:nth-of-type(2) {
+    margin-top: 23px;
+    color: #ccc;
+}
+
+.fc1 span:nth-of-type(3) {
+    margin-top: 23px;
+}
+
+.fc1 img {
+    width: 100%;
+    transition: opacity .6s;
+}
+
+.fc1 a:hover img {
+    opacity: .6;
+}
+
+/* face 컨텐츠2 - 뷰티 밤 */
+
+.fc2 {
+    position: relative;
+    top: -47vh;
+    margin-right: 50%;
+    padding: 3.6%;
+    box-sizing: border-box;
+    width: 50%;
+    min-width: 448px;
+    min-height: 628px;
+    color: #000;
+}
+
+.fc2 a {
+    position: relative;
+    left: -2.9vw;
+    width: 31.2vw;
+    padding: 10% 0% 0% 10%;
+    box-sizing: border-box;
+    display: block;
+    background: linear-gradient(180deg, #ac8d73 0%, #e8d8cb 100%);
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fc2 h2 {
+    font-size: 3vw;
+    white-space: nowrap;
+}
+
+.fc2 span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.fc2 span:nth-of-type(2) {
+    margin-top: 23px;
+    color: #fff;
+}
+
+.fc2 img {
+    width: 100%;
+    /* 
+    포지션 값을 주면 부모박스가 자식을 인식하지 못해 높이값 자동이 안먹힘, 위치값을 주고 싶으면 트랜스폼을 활용한다.
+    (포지션 남용하지 말자.)
+    또한, 가로값을 이용해 이미지를 키우면 부모박스도 같이 커지므로 스케일값으로 크기를 조정한다.
+    */
+    transform: translate(-10%, -8%) scale(1.2);
+    transition: opacity .6s;
+}
+
+.fc2 a:hover img {
+    opacity: .6;
+}
