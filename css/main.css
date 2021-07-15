@@ -59,7 +59,8 @@ body::before {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.226); /* 애니메이션할때 이거 지워야된다 까먹지마셈*/
+    background-color: rgba(0, 0, 0, 0.295);
+    /* 애니메이션할때 이거 지워야된다 까먹지마셈*/
     /* animation: body 3s ease-in forwards; */
 }
 
@@ -69,7 +70,7 @@ body::before {
     }
 
     to {
-        background-color: rgba(0, 0, 0, 0.226);
+        background-color: rgba(0, 0, 0, 0.295);
     }
 }
 
@@ -78,7 +79,7 @@ body::before {
 section {
     position: relative;
     width: 100%;
-    height: 2000px;
+    min-width: 760px;
 }
 
 /* 임시 테두리 */
@@ -275,3 +276,172 @@ footer {
 
 
 /* ////////////////////////////////////////// 섹션 1 ///////////////////////////////////////// */
+
+.lookbx {
+    width: 100%;
+    height: auto;
+}
+
+/*/////////////////////////////// 천우희//////////////////////////////////////////////// */
+
+.wooheebx {
+    position: relative;
+    width: calc(100% - 16.33%);
+    margin: 0 auto;
+    outline: 2px dotted blue;
+}
+
+/* 천우희 이미지 */
+.woohee {
+    position: relative;
+    left: 23.3vw;
+    top: 170px;
+    width: 60vw;
+    border-radius: 10px;
+}
+
+/* 천우희 이미지 텍스트 */
+.muse {
+    position: relative;
+    bottom: -14vh;
+    width: 50vw;
+    left: 11vw;
+    background: url(../images/typo-muse-2.svg) no-repeat bottom/100%;
+}
+
+
+/* 네케르 스토리 */
+.nstory {
+    color: #fff;
+    text-align: right;
+    margin-top: 202px;
+    padding-right: 10vw;
+}
+
+.nstory li:nth-child(3) {
+    margin-top: 45px;
+    margin-right: 48px;
+}
+
+.nstory li:nth-child(3) a::after {
+    content: url(../images/icon--button.svg);
+    position: absolute;
+    margin-left: 12px;
+    margin-top: -6px;
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+}
+
+.nstory li:nth-child(3):hover a::after {
+    transform: scale(1.2);
+}
+
+/*////////////////////////////// 김혜준//////////////////////////////////////// */
+
+.hybx {
+    position: relative;
+    width: calc(100% - 16.33%);
+    margin: 0 auto;
+    outline: 2px dotted blue;
+}
+
+/* 김혜준 이미지 */
+.hyejun {
+    position: relative;
+    left: 0vw;
+    top: 170px;
+    width: 58vw;
+    border-radius: 10px;
+}
+
+/* 김혜준 이미지 텍스트 */
+.lookbook {
+    position: relative;
+    bottom: -16vh;
+    width: 50vw;
+    left: 17vw;
+    background: url(../images/typo-lookbook-2.svg) no-repeat bottom/100%;
+}
+
+/* 메이크업 */
+.makeup {
+    color: #fff;
+    margin-top: 202px;
+    padding-left: 10vw;
+}
+
+.makeup li:nth-child(3) {
+    margin-top: 45px;
+    margin-right: 48px;
+}
+
+.makeup li:nth-child(3) a::after {
+    content: url(../images/icon--button.svg);
+    position: absolute;
+    margin-left: 12px;
+    margin-top: -6px;
+    transition: transform .2s ease-in-out;
+}
+
+.makeup li:nth-child(3):hover a::after {
+    transform: scale(1.2);
+}
+
+
+/* /////////////////// 플라워 가든//////////////////////////////////// */
+
+.flowerbx {
+    position: relative;
+    width: calc(100% - 16.33%);
+    margin: 0 auto;
+    outline: 2px dotted blue;
+}
+
+/* 플라워가든 이미지 */
+.fgImg {
+    position: relative;
+    left: 23.3vw;
+    top: 170px;
+    width: 60vw;
+    border-radius: 10px;
+}
+
+/* 플라워가든 이미지 텍스트 */
+.flowerGarden {
+    position: relative;
+    bottom: -13vh;
+    width: 48vw;
+    left: 11vw;
+    background: url(../images/typo-flower-2.svg) no-repeat bottom/100%;
+}
+
+
+/* 플라워가든 텍스트 */
+.fgtest {
+    color: #fff;
+    text-align: right;
+    margin-top: 202px;
+    padding-right: 10vw;
+}
+
+.fgtest li:nth-child(5) {
+    font-weight: bold;
+    margin-top: 45px;
+    margin-right: 48px;
+}
+
+.fgtest li:nth-child(5) a::after {
+    content: url(../images/icon--button.svg);
+    position: absolute;
+    margin-left: 12px;
+    margin-top: -6px;
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+}
+
+.fgtest li:nth-child(5):hover a::after {
+    transform: scale(1.2);
+}
+
+
+/* /////////////////////////////////////// 섹션2 ////////////////////////////////////////////////////////// */
