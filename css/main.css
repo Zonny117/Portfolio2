@@ -6,11 +6,12 @@
 /* font-family: 'Noto Sans KR', sans-serif; */
 /* font-family: 'Public Sans', sans-serif; */
 
-
+/* 모바일 화면시 오른쪽 여백 제거하기 위해 html, body에 공통으로 overflow-x=hidden 설정 */
 body,
 html,
 h1,
-h2 {
+h2,
+h3 {
     margin: 0;
     padding: 0;
 }
@@ -44,13 +45,19 @@ a {
     border-radius: 5px;
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 
 /* 배경화면 및 폰트 세팅 */
 body {
     position: relative;
     width: 100%;
-    min-width: 760px;
     height: 100%;
+    min-width: 760px;
+    overflow-x: hidden;
     font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
     background: url(../images/bg.jpg) no-repeat fixed top/cover;
 }
@@ -62,6 +69,7 @@ body::before {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.295);
+    z-index: -1;
     /* 애니메이션할때 이거 지워야된다 까먹지마셈*/
     /* animation: body 3s ease-in forwards; */
 }
@@ -81,8 +89,9 @@ body::before {
 section {
     position: relative;
     width: 100%;
-    min-width: 760px;
 }
+
+
 
 /* 임시 테두리 */
 main,
@@ -99,11 +108,20 @@ footer {
     outline: 2px dotted blue;
 }
 
+/* 가상 속박스 공통 클래스*/
+.rbxIn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10%;
+}
+
 /*///////////////////////////////////////////////// 상단영역 /////////////////////////////////*/
 .mainbx {
     position: relative;
     width: 100%;
-    min-width: 760px;
     height: 100vh;
 }
 
@@ -134,7 +152,7 @@ footer {
 /* 메인로고 */
 .biglogo {
     position: relative;
-    height: 100vh;
+    height: 87.5vh;
 }
 
 .biglogo img {
@@ -142,7 +160,8 @@ footer {
     display: block;
     width: 45vw;
     top: 61vh;
-    opacity: 1; /* 애니메이션 작업할때 0으로 */
+    opacity: 1;
+    /* 애니메이션 작업할때 0으로 */
     /* animation: bimg .5s ease-in 3s forwards; */
 }
 
@@ -218,7 +237,7 @@ footer {
     display: inline-block;
     margin-left: 15px;
     top: 2px;
-    transform: rotate(-90deg);
+    transform: rotate(270deg);
     height: 20px;
     transition: .4s ease-in-out;
 }
@@ -258,6 +277,21 @@ footer {
     border-bottom: 20px solid #000;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
+}
+
+.store ol li {
+    overflow: hidden;
+}
+
+/* 각 서브메뉴 마우스오버 트랜지션 */
+.store ol li a {
+    display: block;
+    transform: translateY(-100%);
+}
+
+.store>li:hover ol li a {
+    transform: translateY(0%);
+    transition: transform .6s ease-in-out .2s;
 }
 
 .store>li:hover ol {
@@ -447,7 +481,12 @@ footer {
 }
 
 
+
+
+
+
 /* /////////////////////////////////////// 섹션2 ////////////////////////////////////////////////////////// */
+
 .facebx {
     width: 100%;
     height: auto;
@@ -455,10 +494,8 @@ footer {
 
 .facebx2 {
     position: relative;
+    height: 100%;
 }
-
-
-/* face 컨텐츠 - 파운데이션 */
 
 .facetxt {
     margin-top: 300px;
@@ -474,15 +511,17 @@ footer {
     padding-left: 10vw;
 }
 
+
+
+
+/* face 컨텐츠 - 파운데이션 */
 .fc1 {
-    position: relative;
-    margin-top: 100px;
+    /* position: relative; */
+    margin-top: 200px;
     margin-left: 50%;
     padding: 3.6%;
     box-sizing: border-box;
     width: 50%;
-    min-width: 448px;
-    min-height: 628px;
     color: #000;
 }
 
@@ -490,13 +529,20 @@ footer {
     position: relative;
     right: -7.3vw;
     width: 31.2vw;
-    padding: 10%;
     box-sizing: border-box;
     display: block;
     background-color: #fff;
     color: #000;
     border-radius: 10px;
     font-family: 'Public Sans', sans-serif;
+}
+
+
+/* 비율유지 가상 박스 */
+.fc1 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
 }
 
 .fc1 h2 {
@@ -521,7 +567,10 @@ footer {
 }
 
 .fc1 img {
-    width: 100%;
+    position: absolute;
+    bottom: 7%;
+    right: 10.5%;
+    width: 80%;
     transition: opacity .6s;
 }
 
@@ -529,36 +578,47 @@ footer {
     opacity: .6;
 }
 
+
+
+
+
 /* face 컨텐츠2 - 뷰티 밤 */
 
 .fc2 {
-    position: relative;
-    top: -47vh;
+    /* position: relative; */
     margin-right: 50%;
     padding: 3.6%;
     box-sizing: border-box;
     width: 50%;
-    min-width: 448px;
-    min-height: 628px;
     color: #000;
+    transform: translateY(-40%);
+    /* 위치값으로 배치하면 화면크기에 따라 위치값이 상대적으로 변하므로 트랜스폼으로 위치를 고정시킨다. (중요!!!) */
 }
 
 .fc2 a {
     position: relative;
     left: -2.9vw;
     width: 31.2vw;
-    padding: 10% 0% 0% 10%;
     box-sizing: border-box;
     display: block;
     background: linear-gradient(180deg, #ac8d73 0%, #e8d8cb 100%);
     color: #fff;
     border-radius: 10px;
+    transform: translateY(-10%);
     overflow: hidden;
 }
 
+.fc2 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
 .fc2 h2 {
+    margin-top: 8px;
     font-size: 3vw;
     white-space: nowrap;
+    line-height: 110%;
 }
 
 .fc2 span {
@@ -574,16 +634,1190 @@ footer {
 }
 
 .fc2 img {
+    position: absolute;
     width: 100%;
-    /* 
-    포지션 값을 주면 부모박스가 자식을 인식하지 못해 높이값 자동이 안먹힘, 위치값을 주고 싶으면 트랜스폼을 활용한다.
-    (포지션 남용하지 말자.)
-    또한, 가로값을 이용해 이미지를 키우면 부모박스도 같이 커지므로 스케일값으로 크기를 조정한다.
-    */
-    transform: translate(-10%, -8%) scale(1.2);
+    bottom: 0;
+    right: 0;
     transition: opacity .6s;
 }
 
 .fc2 a:hover img {
     opacity: .6;
+}
+
+
+
+/* face 컨텐츠 3 - 퍼펙션 */
+.fc3 {
+    width: 50%;
+    margin-left: 50%;
+    box-sizing: border-box;
+    color: #000;
+    transform: translateY(-71%);
+}
+
+.fc3 a {
+    position: relative;
+    width: 31.2vw;
+    left: .5vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+    background: url(../images/face_3.jpg) no-repeat center/100% 100%;
+    transform: translateY(-14%);
+}
+
+.fc3 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+
+.fc3 span {
+    display: block;
+    font-weight: lighter;
+    white-space: nowrap;
+}
+
+.fc3 span:nth-of-type(1) {
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.fc3 span:nth-of-type(2) {
+    margin-top: 23px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.fc3 span:nth-of-type(3) {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+
+}
+
+.fc3 span:nth-of-type(4) {
+    margin-top: 23px;
+}
+
+.fc3 a:hover img {
+    opacity: .6;
+}
+
+.fc3 h2 {
+    position: absolute;
+    bottom: 8%;
+    font-size: 3vw;
+    white-space: nowrap;
+}
+
+
+
+
+/* face 컨텐츠 4 - 프로덕트 */
+
+.fc4 a {
+    position: absolute;
+    width: 31.2vw;
+    left: 5vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+    transform: translateY(-115%);
+}
+
+.fc4 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+/* 그라데이션 이미지 변환 박스 */
+.fc4-1 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.fc4-1-1 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    transition: opacity .2s;
+}
+
+.fc4-1 img {
+    width: 50%;
+    background: linear-gradient(180deg, #000, #000) no-repeat center/99% 98%;
+}
+
+
+.fc4-1-1 img {
+    width: 50%;
+    background: linear-gradient(180deg, #f29f79, #ddb9a2, #a97650) no-repeat center/99% 98%;
+}
+
+.fc4 a:hover .fc4-1-1 {
+    opacity: 0;
+}
+
+.fc4-2 {
+    position: absolute;
+    top: 39%;
+}
+
+.fc4 span {
+    color: #666;
+    font-size: 1.3vw;
+}
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////섹션 3////////////////////////////////////////////////////// */
+
+.lipbx {
+    width: 100%;
+    height: auto;
+}
+
+.lipbx2 {
+    position: relative;
+    height: 100%;
+}
+
+.liptxt {
+    color: #fff;
+    padding-left: 10vw;
+    text-align: left;
+    letter-spacing: -0.8px;
+}
+
+.lip {
+    display: block;
+    width: 18vw;
+    margin-top: 67px;
+    margin-left: auto;
+    padding-right: 10vw;
+}
+
+
+/* 립 컨텐츠 1 - 멜로우 레드 */
+.lip1 {
+    /* position: relative; */
+    margin-top: 200px;
+    margin-right: 50%;
+    box-sizing: border-box;
+    width: 50%;
+    color: #000;
+}
+
+.lip1 a {
+    position: relative;
+    width: 31.2vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+
+/* 비율유지 가상 박스 */
+.lip1 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+.lip1 h2 {
+    font-size: 3vw;
+    white-space: nowrap;
+}
+
+.lip1 span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    font-weight: lighter;
+}
+
+.lip1 span:nth-of-type(2) {
+    margin-top: 23px;
+    color: #ccc;
+}
+
+.lip1 span:nth-of-type(3) {
+    margin-top: 23px;
+}
+
+.lip1 img {
+    position: absolute;
+    bottom: 6%;
+    right: 15.5%;
+    margin: 0 auto;
+    width: 70%;
+    transition: opacity .6s;
+}
+
+.lip1 a:hover img {
+    opacity: .6;
+}
+
+
+
+
+/* lip 컨텐츠 2 - 체스트넛 무스 */
+.lip2 {
+    margin-left: 50%;
+    /* padding: 3.6%; */
+    box-sizing: border-box;
+    width: 50%;
+    color: #000;
+    transform: translateY(-40%);
+    /* 위치값으로 배치하면 화면크기에 따라 위치값이 상대적으로 변하므로 트랜스폼으로 위치를 고정시킨다. (중요!!!) */
+}
+
+.lip2 a {
+    position: relative;
+    right: -10.4vw;
+    width: 31.2vw;
+    box-sizing: border-box;
+    display: block;
+    background: linear-gradient(180deg, #954e4e 0%, #d5c2ba 100%);
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.lip2 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+.lip2 h2 {
+    margin-top: 8px;
+    font-size: 3vw;
+    white-space: nowrap;
+    line-height: 110%;
+}
+
+.lip2 span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.lip2 span:nth-of-type(2) {
+    margin-top: 23px;
+    color: #fff;
+}
+
+.lip2 span:nth-of-type(3) {
+    margin-top: 23px;
+    color: #fff;
+}
+
+.lip2 img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    transition: opacity .6s;
+}
+
+.lip2 a:hover img {
+    opacity: .6;
+}
+
+
+/* lip 컨텐츠 3 - 6color */
+.lip3 {
+    margin-right: 50%;
+    box-sizing: border-box;
+    width: 50%;
+    color: #000;
+    transform: translateY(-70%);
+}
+
+.lip3 a {
+    position: relative;
+    width: 31.2vw;
+    left: 5vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.lip3 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+.lip3 h3 {
+    margin-top: 5%;
+    font-size: 2vw;
+}
+
+.lip3 span {
+    display: block;
+    margin-top: 23px;
+    color: #ccc;
+}
+
+/* lip svg 이미지 설정 */
+.lip3 svg {
+    display: block;
+    margin: 15% auto;
+    width: 80%;
+    height: 50%;
+}
+
+/* svg 각 영역 색 채우기 */
+.lcolor1 {
+    fill: #aa5551
+}
+
+.lcolor2 {
+    fill: #ac4347
+}
+
+.lcolor3 {
+    fill: #9e2133
+}
+
+.lcolor4 {
+    fill: #d82e2a
+}
+
+.lcolor5 {
+    fill: #f35a31
+}
+
+.lcolor6 {
+    fill: #b02c27
+}
+
+.lip3 h2 {
+    font-size: 4vw;
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+
+
+/* lip 컨텐츠 4 - 프로덕트 */
+
+.lip4 a {
+    position: absolute;
+    width: 31.2vw;
+    right: 10vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+    transform: translateY(-115%);
+}
+
+.lip4 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+/* 그라데이션 이미지 변환 박스 */
+.lip4-1 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.lip4-1-1 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    transition: opacity .2s;
+}
+
+.lip4-1 img {
+    width: 50%;
+    background: linear-gradient(180deg, #000, #000) no-repeat center/99% 98%;
+}
+
+
+.lip4-1-1 img {
+    width: 50%;
+    background: linear-gradient(180deg, #e8a69d, #e18580, #d75053) no-repeat center/99% 98%;
+}
+
+.lip4 a:hover .lip4-1-1 {
+    opacity: 0;
+}
+
+.lip4-2 {
+    position: absolute;
+    top: 39%;
+}
+
+.lip4 span {
+    color: #666;
+    font-size: 1.3vw;
+}
+
+
+/* //////////////////////////////////////////// 섹션4//////////////////////////////////////////////////////////// */
+.eyebx {
+    width: 100%;
+    height: auto;
+}
+
+.eyebx2 {
+    position: relative;
+    height: 100%;
+}
+
+.eyetxt {
+    color: #fff;
+    padding-right: 10vw;
+    text-align: right;
+    letter-spacing: -0.8px;
+}
+
+.eye {
+    display: block;
+    width: 18vw;
+    margin-top: 67px;
+    margin-right: auto;
+    padding-left: 10vw;
+}
+
+
+
+/* eye 컨텐츠 - 무드 브라운 */
+.eye1 {
+    /* position: relative; */
+    margin-top: 200px;
+    margin-left: 50%;
+    box-sizing: border-box;
+    width: 50%;
+    color: #000;
+}
+
+.eye1 a {
+    position: relative;
+    width: 31.2vw;
+    right: -10.4vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+
+/* 비율유지 가상 박스 */
+.eye1 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+.eye1 h2 {
+    font-size: 3vw;
+    white-space: nowrap;
+}
+
+.eye1 span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    font-weight: lighter;
+}
+
+.eye1 span:nth-of-type(2) {
+    margin-top: 23px;
+    color: #ccc;
+}
+
+.eye1 span:nth-of-type(3) {
+    margin-top: 23px;
+}
+
+.eye1 img {
+    position: absolute;
+    bottom: 6%;
+    right: 15.5%;
+    margin: 0 auto;
+    width: 70%;
+    transition: opacity .6s;
+}
+
+.eye1 a:hover img {
+    opacity: .6;
+}
+
+
+/* eye 컨텐츠 2 - 벨리 라이크 블렌딩 */
+.eye2 {
+    width: 50%;
+    margin-right: 50%;
+    box-sizing: border-box;
+    color: #000;
+    transform: translateY(-51%);
+}
+
+.eye2 a {
+    position: relative;
+    width: 31.2vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+    background: url(../images/eye_2.jpg) no-repeat center/100% 100%;
+}
+
+.eye2 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+
+.eye2 span {
+    display: block;
+    font-weight: lighter;
+    white-space: nowrap;
+}
+
+.eye2 span:nth-of-type(1) {
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.eye2 span:nth-of-type(2) {
+    margin-top: 23px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.eye2 span:nth-of-type(3) {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+
+}
+
+.eye2 span:nth-of-type(4) {
+    margin-top: 23px;
+}
+
+.eye2 a:hover img {
+    opacity: .6;
+}
+
+.eye2 h2 {
+    position: absolute;
+    bottom: 8%;
+    font-size: 3vw;
+    white-space: nowrap;
+}
+
+/* eye 컨텐츠 3 - 4color */
+.eye3 {
+    margin-left: 50%;
+    box-sizing: border-box;
+    width: 50%;
+    color: #000;
+    transform: translateY(-70%);
+}
+
+.eye3 a {
+    position: relative;
+    width: 31.2vw;
+    left: 1vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.eye3 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+.eye3 h3 {
+    margin-top: 5%;
+    font-size: 2.2vw;
+}
+
+.eye3 span {
+    display: block;
+    margin-top: 23px;
+    color: #ccc;
+}
+
+/* eye svg 이미지 설정 */
+.eye3 svg {
+    display: block;
+    margin: 5% auto;
+    width: 80%;
+    height: 50%;
+}
+
+/* svg 각 영역 색 채우기 */
+.ecolor1 {
+    fill: #837067
+}
+
+.ecolor2 {
+    fill: #614c44
+}
+
+.ecolor3 {
+    fill: #937074
+}
+
+.ecolor4 {
+    fill: #b38d81
+}
+
+.eye3 h2 {
+    position: absolute;
+    bottom: 6%;
+    left: 25%;
+    font-size: 4vw;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* eye 컨텐츠 4 - 프로덕트 */
+
+.eye4 a {
+    position: absolute;
+    width: 31.2vw;
+    left: 5vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+    transform: translateY(-115%);
+}
+
+.eye4 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+/* 그라데이션 이미지 변환 박스 */
+.eye4-1 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.eye4-1-1 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    transition: opacity .2s;
+}
+
+.eye4-1 img {
+    width: 50%;
+    background: linear-gradient(180deg, #000, #000) no-repeat center/99% 99%;
+}
+
+
+.eye4-1-1 img {
+    width: 50%;
+    background: linear-gradient(0deg, #e6b4a8, #bfb5e2) no-repeat center/99% 99%;
+}
+
+.eye4 a:hover .eye4-1-1 {
+    opacity: 0;
+}
+
+.eye4-2 {
+    position: absolute;
+    top: 39%;
+}
+
+.eye4 span {
+    color: #666;
+    font-size: 1.3vw;
+}
+
+
+
+/* ////////////////////////////////////////////////////////섹션5/////////////////////////////////////////////////// */
+.skinbx {
+    width: 100%;
+    height: auto;
+}
+
+.skinbx2 {
+    position: relative;
+    height: 100%;
+}
+
+.skintxt {
+    color: #fff;
+    padding-left: 10vw;
+    text-align: left;
+    letter-spacing: -0.8px;
+}
+
+.skincare {
+    display: block;
+    width: 37vw;
+    margin-top: 67px;
+    margin-left: auto;
+    padding-right: 10vw;
+}
+
+
+/* skin 컨텐츠 1 - 모이스터치 */
+.skin1 {
+    margin-top: 200px;
+    margin-right: 50%;
+    box-sizing: border-box;
+    width: 50%;
+    color: #000;
+}
+
+.skin1 a {
+    position: relative;
+    width: 31.2vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+
+/* 비율유지 가상 박스 */
+.skin1 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+.skin1 h2 {
+    font-size: 3vw;
+    white-space: nowrap;
+}
+
+.skin1 span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    font-weight: lighter;
+}
+
+.skin1 span:nth-of-type(2) {
+    margin-top: 23px;
+    color: #ccc;
+}
+
+.skin1 span:nth-of-type(3) {
+    margin-top: 23px;
+}
+
+.skin1 img {
+    position: absolute;
+    bottom: 6%;
+    right: 10.5%;
+    margin: 0 auto;
+    width: 80%;
+    transition: opacity .6s;
+}
+
+.skin1 a:hover img {
+    opacity: .6;
+}
+
+/* skin 컨텐츠2 - 미스트 */
+.skin2 {
+    margin-left: 50%;
+    /* padding: 3.6%; */
+    box-sizing: border-box;
+    width: 50%;
+    color: #000;
+    transform: translateY(-40%);
+    /* 위치값으로 배치하면 화면크기에 따라 위치값이 상대적으로 변하므로 트랜스폼으로 위치를 고정시킨다. (중요!!!) */
+}
+
+.skin2 a {
+    position: relative;
+    right: -10.4vw;
+    width: 31.2vw;
+    box-sizing: border-box;
+    display: block;
+    background: linear-gradient(180deg, #fd9785 0%, #f7dfbf 100%);
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skin2 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+.skin2 h2 {
+    margin-top: 8px;
+    font-size: 3vw;
+    white-space: nowrap;
+    line-height: 110%;
+}
+
+.skin2 span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.skin2 span:nth-of-type(2) {
+    margin-top: 23px;
+    color: #fff;
+}
+
+.skin2 span:nth-of-type(3) {
+    margin-top: 23px;
+    color: #fff;
+}
+
+.skin2 img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    transition: opacity .6s;
+}
+
+.skin2 a:hover img {
+    opacity: .6;
+}
+
+/* skin 컨텐츠 3 - 모이스터치 크림*/
+.skin3 {
+    width: 50%;
+    margin-right: 50%;
+    box-sizing: border-box;
+    color: #000;
+    transform: translateY(-79%);
+}
+
+.skin3 a {
+    position: relative;
+    width: 31.2vw;
+    left: 5vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+    background: url(../images/skincare_3.jpg) no-repeat center/100% 100%;
+}
+
+.skin3 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+
+.skin3 span {
+    display: block;
+    font-weight: lighter;
+    white-space: nowrap;
+}
+
+.skin3 span:nth-of-type(1) {
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.skin3 span:nth-of-type(2) {
+    margin-top: 23px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.skin3 span:nth-of-type(3) {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+
+}
+
+.skin3 span:nth-of-type(4) {
+    margin-top: 23px;
+}
+
+.skin3 a:hover img {
+    opacity: .6;
+}
+
+.skin3 h2 {
+    position: absolute;
+    bottom: 8%;
+    font-size: 3vw;
+    white-space: nowrap;
+}
+
+/* skin 컨텐츠 4 - 프로덕트 */
+.skin4 a {
+    position: absolute;
+    width: 31.2vw;
+    right: 10vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+    transform: translateY(-115%);
+}
+
+.skin4 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+/* 그라데이션 이미지 변환 박스 */
+.skin4-1 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.skin4-1-1 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    transition: opacity .2s;
+}
+
+.skin4-1 img {
+    width: 50%;
+    background: linear-gradient(180deg, #000, #000) no-repeat center/99% 99%;
+}
+
+
+.skin4-1-1 img {
+    width: 50%;
+    background: linear-gradient(180deg, #e6c8bd, #fdc982, #d77970) no-repeat center/99% 99%;
+}
+
+.skin4 a:hover .skin4-1-1 {
+    opacity: 0;
+}
+
+.skin4-2 {
+    position: absolute;
+    top: 39%;
+}
+
+.skin4 span {
+    color: #666;
+    font-size: 1.3vw;
+}
+
+/* /////////////////////////////////////////////////////푸터 영역////////////////////////////////////////////////////////// */
+footer {
+    width: 100%;
+    height: auto;
+    z-index: 99;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 545px;
+}
+
+footer span {
+    display: block;
+}
+
+
+/* 회사 주소 */
+address {
+    font-style: normal;
+    word-spacing: -1px;
+}
+
+address span+span {
+    margin-top: 10px;
+}
+
+
+/* 연락 */
+.emailbx {
+    margin-top: 35px;
+}
+
+.emailbx span {
+    margin-top: 10px;
+}
+
+.copy {
+    letter-spacing: -0.7px;
+}
+
+/* 패밀리 사이트 */
+.familybx {
+    position: relative;
+    margin-top: 60px;
+    font-size: 12px;
+}
+
+.family>li {
+    width: 100px;
+}
+
+/* li 마우스오버용 가상영역 */
+.family>li:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    width: 100px;
+    height: 20px;
+}
+
+/* 화살표 아이콘 */
+.family span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: url(../images/icon-arrow-white.svg) no-repeat center/100%;
+    transform: rotate(0deg);
+    transition: transform .3s ease-in-out;
+}
+
+.family>li:hover span {
+    transform: rotate(-180deg);
+}
+
+/* 패밀리사이트 서브메뉴 */
+.family ol {
+    position: absolute;
+    top: -145px;
+    background-color: #fff;
+    width: 100px;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+
+    opacity: 0;
+    height: 0px;
+    padding: 0px;
+    overflow: hidden;
+    transition: opacity .6s ease-in-out;
+}
+
+/* 역삼각형 가상요소 */
+.family ol::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -10px;
+    border-top: 20px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+/* 각 서브메뉴 마우스 오버 트랜지션 */
+.family ol li {
+    overflow: hidden;
+}
+
+.family ol li a {
+    transform: translateY(-100%);
+}
+
+.family>li:hover ol li a {
+    transform: translateY(0%);
+    transition: transform .6s ease-in-out;
+}
+
+.family ol li+li {
+    margin-top: 4px;
+}
+
+.family ol li a {
+    display: block;
+    color: #000;
+}
+
+.family>li:hover ol {
+    padding: 15px;
+    height: 130px;
+    opacity: 1;
+    overflow: visible;
+    /* 삼각형보이게 */
+}
+
+/* sns */
+.snsbx {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sns {
+    display: flex;
+}
+
+.sns li+li {
+    margin-left: 20px;
+}
+
+.sns img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
 }
