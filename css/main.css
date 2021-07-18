@@ -23,6 +23,10 @@ ol {
     list-style: none;
 }
 
+img {
+    border: none;
+}
+
 a {
     color: #fff;
     text-decoration: none;
@@ -127,39 +131,58 @@ footer {
 
 
 #top {
-    position: relative;
+    position: fixed;
     display: flex;
     width: 100%;
     height: 114px;
     padding: 30px;
     box-sizing: border-box;
     z-index: 999;
+    transition: .6s;
+}
+
+#top.on {
+    height: 0;
 }
 
 /* 상단로고 */
 .mlogo {
-    padding: 10px;
+    position: fixed;
+    top: 30px;
+    left: 30px;
     box-sizing: border-box;
+    z-index: 999;
+    transition: .6s;
+}
+
+/* 마우스 휠 이벤트용 클래스 */
+.mlogo.on {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    box-sizing: border-box;
+    z-index: 999;
+    transition: .6s;
 }
 
 .mlogo a {
     display: block;
     width: 100%;
     height: 100%;
-    line-height: 54px;
+    line-height: 68px;
 }
 
 /* 메인로고 */
 .biglogo {
     position: relative;
-    height: 87.5vh;
+    height: 100vh;
 }
 
 .biglogo img {
     position: absolute;
     display: block;
     width: 45vw;
-    top: 61vh;
+    top: 73vh;
     opacity: 1;
     /* 애니메이션 작업할때 0으로 */
     /* animation: bimg .5s ease-in 3s forwards; */
@@ -174,7 +197,7 @@ footer {
 .biglogo span {
     position: absolute;
     left: 46%;
-    top: 61vh;
+    top: 72vh;
     opacity: 1;
     float: right;
     font-size: 2.08vw;
@@ -219,8 +242,12 @@ footer {
     transform: translateY(-50%);
     font-weight: bold;
     text-align: center;
+    transition: .6s;
 }
 
+.store.on {
+    top: 0px;
+}
 
 .store>li {
     display: block;
@@ -301,15 +328,92 @@ footer {
     overflow: visible;
 }
 
+/* 토글용 메뉴 */
+#top2 {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 0px;
+    box-sizing: border-box;
+    z-index: 999;
+    background-color: #000;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+    transition: .6s;
+}
+
+#top2.on {
+    height: 450px;
+}
+
+#product,
+#about {
+    box-sizing: border-box;
+    margin-left: 15%;
+    margin-top: 100px;
+}
+
+
+
+#product li,
+#about li {
+    overflow: hidden;
+}
+
+#product a,
+#about a {
+    display: block;
+    font-size: 30px;
+    transform: translateY(100%);
+    transition: all .6s ease-in-out;
+}
+
+/* #top2에 클래스 on 들어가면 서브메뉴 원위치*/
+#top2.on #product a,
+#top2.on #about a {
+    transform: translateY(0%);
+}
+
+/* 마우스오버용 밑줄 가상요소 */
+#product a::after,
+#about a::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid #fff;
+    width: 0;
+    transition: all .3s ease-in-out;
+}
+
+#product li:hover a::after,
+#about li:hover a::after {
+    width: 100%;
+    border-bottom: 3px solid #fff;
+}
+
+#product li+li,
+#about li+li {
+    margin-top: 10px;
+}
+
+.ptit,
+.atit {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+
 /* 햄버거 버튼 */
 .ham {
-    position: absolute;
+    position: fixed;
     top: 65px;
     right: 35px;
-    transform: translateY(-50%);
     width: 40px;
     height: 25px;
     cursor: pointer;
+    z-index: 9999;
+    transform: translateY(-50%);
+    transition: .6s;
 }
 
 .ham span {
@@ -318,6 +422,28 @@ footer {
     width: 100%;
     height: 3px;
     margin-bottom: 8px;
+}
+
+.ham.on span {
+    transition: .6s;
+}
+
+.ham.on span:first-child {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(40deg);
+}
+
+.ham.on span:nth-child(2) {
+    display: none;
+}
+
+.ham.on span:last-child {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-40deg);
 }
 
 
@@ -1644,13 +1770,13 @@ footer {
 
 .skin4-1 img {
     width: 50%;
-    background: linear-gradient(180deg, #000, #000) no-repeat center/99% 99%;
+    background: linear-gradient(180deg, #000, #000) no-repeat center/99% 98%;
 }
 
 
 .skin4-1-1 img {
     width: 50%;
-    background: linear-gradient(180deg, #e6c8bd, #fdc982, #d77970) no-repeat center/99% 99%;
+    background: linear-gradient(180deg, #e6c8bd, #fdc982, #d77970) no-repeat center/99% 98%;
 }
 
 .skin4 a:hover .skin4-1-1 {
@@ -1730,6 +1856,8 @@ address span+span {
 /* 화살표 아이콘 */
 .family span {
     display: inline-block;
+    margin: 0;
+    padding: 0;
     width: 8px;
     height: 8px;
     background: url(../images/icon-arrow-white.svg) no-repeat center/100%;
