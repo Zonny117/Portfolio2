@@ -8,8 +8,24 @@
         overflow-x: hidden;
     }
 
+
+    /* 상단 영역 */
     .gnb {
         display: none;
+    }
+
+    .mlogo{
+        top: 13px;
+        left: 16px;
+    }
+
+    .mlogo.on{
+        top: 13px;
+        left: 16px;
+    }
+
+    .mlogo img{
+        line-height: 30px;
     }
 
     .biglogo span{
@@ -26,6 +42,43 @@
     }
 
     .store{
-        right: 126px;
+        top: 48px;
+        right: 82px;
+    }
+    .storeTit{
+        font-size: 12px;
+    }
+
+    .storeTit::after{
+        top: 4px;
+        margin-left: 5px;
+        transform: rotate(270deg) scale(.7);
+        
+    }
+
+    .store>li:hover .storeTit::after {
+        transform: rotate(90deg) scale(.7);
+    }
+
+    .store ol{
+        width: 153px;
+    }
+
+    .ham{
+        top: 46px;
+        width: 30px;
+        right: 19px;
+    }
+
+
+
+}
+
+
+/* 갤럭시 폴드 */
+@media only screen and (max-width:300px){
+
+    .store{
+        right: 63px;
     }
 }
