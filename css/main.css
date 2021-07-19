@@ -175,14 +175,21 @@ footer {
 /* 메인로고 */
 .biglogo {
     position: relative;
+    /* blogobx 부모자격 */
     height: 100vh;
 }
 
-.biglogo img {
+/* 로고 이미지 및 span 글씨 겉박스 */
+.blogobx {
     position: absolute;
+    bottom: 0;
+    width: 49vw;
+    /* 박스 비율 유지를 위해 가로크기를 자식요소들이 안을 꽉 채울수 있게 조절 */
+}
+
+.biglogo img {
     display: block;
     width: 45vw;
-    top: 73vh;
     opacity: 1;
     /* 애니메이션 작업할때 0으로 */
     /* animation: bimg .5s ease-in 3s forwards; */
@@ -196,13 +203,13 @@ footer {
 
 .biglogo span {
     position: absolute;
-    left: 46%;
-    top: 72vh;
-    opacity: 1;
-    float: right;
+    right: 0;
+    white-space: nowrap;
     font-size: 2.08vw;
     color: #fff;
     letter-spacing: -2px;
+    opacity: 1;
+    /* 애니메이션 용 */
     /* animation: bspan .5s ease-in-out 3.3s forwards; */
 }
 
@@ -421,26 +428,39 @@ footer {
     background-color: #fff;
     width: 100%;
     height: 3px;
+    /* 햄버거로 돌아갈때 트랜스폼이 먼저 */
+    transition: margin .3s .5s, transform .3s;
+}
+
+.ham span:first-child{
     margin-bottom: 8px;
 }
 
-.ham.on span {
-    transition: .6s;
+.ham span:nth-child(2){
+    margin: 8px 0;
+}
+
+.ham span:last-child{
+    margin-top: 8px;
+}
+
+.ham.on span{
+    margin: 0;
+    /* 엑스표시 될때 마진이 먼저 트랜지션 */
+    transition: margin .3s, transform .3s .5s;
 }
 
 .ham.on span:first-child {
-    display: block;
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotate(40deg);
 }
 
 .ham.on span:nth-child(2) {
-    display: none;
+    opacity: 0;
 }
 
 .ham.on span:last-child {
-    display: block;
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotate(-40deg);
