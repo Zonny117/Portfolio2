@@ -26,7 +26,7 @@ $(function () {
         // deltaY - 마우스휠 Y축 방향값
 
         // deltaY가 양수이면 마우스휠이 내려가는 값, 음수이면 휠이 올라가는 값
-        if (E > 0) { //마우스 휠 내릴떄 상단 메뉴 숨기기
+        if (E > 0 || e.originalEvent.detail < 0) { //마우스 휠 내릴떄 상단 메뉴 숨기기
             $("#top").css({
                 padding: "0px",
                 height: "0px"
@@ -40,13 +40,17 @@ $(function () {
                 top: "-50px"
             })
 
-            // 토글메뉴 햄버거버튼 고정
-            $(".ham.on").css({
-                top: "65px"
-            })
 
             $(".mlogo").css({
                 top: "-80px"
+            })
+
+
+
+
+            // 토글메뉴 햄버거버튼 고정
+            $(".ham.on").css({
+                top: "65px"
             })
 
             // 토글메뉴 로고 고정
@@ -82,7 +86,7 @@ $(function () {
         // 스크롤 올릴시 햄버거 버튼과 로고만 남아있는 이질감 방지
         $(".ham.on").click(function () {
 
-            if (E > 0) {
+            if (E > 0 || e.originalEvent.detail < 0) {
                 $("#top").css({
                     padding: "30px",
                     height: "114px"
