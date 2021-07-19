@@ -3,9 +3,8 @@
 
 @media only screen and (max-width:760px) {
     body {
-        background: url(../images/bgm.jpg) no-repeat fixed center/cover;
+        background: url(../images/bgm.jpg) no-repeat fixed top/cover;
         min-width: unset;
-        overflow-x: hidden;
     }
 
 
