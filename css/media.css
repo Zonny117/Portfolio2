@@ -5,6 +5,7 @@
     body {
         background: url(../images/bgm.jpg) no-repeat fixed center/cover;
         min-width: unset;
+        overflow-x: hidden;
     }
 
     .gnb {
@@ -12,7 +13,19 @@
     }
 
     .biglogo span{
-        font-size: 3vw;
-        right: 10%;
+        font-size: 5vw;
+        right: -42%;
+    }
+
+    .biglogo img{
+        width: 76vw;
+    }
+
+    .wid{
+        width: 100%;
+    }
+
+    .store{
+        right: 126px;
     }
 }
