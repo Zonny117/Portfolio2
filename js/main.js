@@ -4,18 +4,6 @@
 // jqueryUI (배경 애니메이트 가능), jquery.transform.js(트랜스폼 애니메이트 가능)
 // 그라데이션 트랜지션 기능은 현재 구현 불가능
 
-// 모바일 웹 주소창 숨기기
-// window.addEventListener('load', function () {
-//     // body의 height를 살짝 늘리는 코드
-//     if(document.documentElement.clientWidth<= 760){
-//         document.body.style.height = (document.documentElement.clientHeight + 5) + "px";
-
-//         // scroll를 제어 하는 코드
-//         setTimeout(scrollTo, 0, 0, 1);
-//     }
-// }, false);
-
-
 $(function () {
 
 
@@ -148,7 +136,7 @@ $(function () {
     ///////////////////////////////////////////////////////////////////////////////////////////
 
 
-    
+
     /////////////////////////////// // 상위메뉴 마우스 휠 이벤트////////////////////////////////
     $("html, body").on('mousewheel DOMMouseScroll', function (e) {
 
