@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* 미디어쿼리 */
 
-@media screen and (max-width:760px) {
+@media only screen and (max-width:760px) {
     body {
         min-width: unset;
         background: url(../images/bgm.jpg) no-repeat fixed center/cover;
@@ -18,6 +18,12 @@
         display: block;
         margin-top: 30px;
         padding-top: 138%;
+    }
+
+
+    .biglogo {
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
     }
 
     /* /////////////////////////////상단 영역 ////////////////////*/
