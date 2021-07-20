@@ -31,7 +31,7 @@ $(function () {
 
     /////////////////// //////////모바일 터치 상위 메뉴 이벤트////////////////////////////////////
 
-    $(document).on('touchstart touchend touchmove', function (e) {
+    $(document).on('touchstart touchend', function (e) {
         e.stopPropagation();
     });
 
@@ -88,11 +88,11 @@ $(function () {
             $(".mlogo.on").css({
                 top: "13px"
             })
-    
+
+            // 모바일에서 .store 메뉴가 열린 상태에서 스크롤 내려가면 숨기기
             $(".store ol").css({
                 opacity: 0
             });
-
 
         } ///////////////////////
         ///////////////////////
@@ -115,6 +115,7 @@ $(function () {
                 top: "13px"
             })
 
+            // 모바일에서 .store 메뉴가 열린 상태에서 스크롤 올라가면 보이기
             $(".store ol").css({
                 opacity: 1
             });
@@ -132,19 +133,6 @@ $(function () {
             } ///////////////////////////
         }); /////////////////////
     }); //////////////////
-
-    // $(document).on('mousemove', function (e) {
-    //     let tM = e.originalEvent.screenY;
-    //     console.log("무브: " + tM)
-
-    //     if(tM)
-    //     $(".store ol").css({
-    //         opacity: 0
-    //     });
-    // })
-
-
-
     ///////////////////////////////////////////////////////////////////////////////////////////
 
 
