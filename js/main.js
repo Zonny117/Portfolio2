@@ -52,8 +52,19 @@ $(function () {
 
         let deltaY = tS - tE;
         // console.log("터치 위치값: " + deltaY);
+        // console.log(deltaY)
 
-        if (deltaY > 0) {
+        // 상단메뉴 터치시 기준값이 0이면 미세한 터치차이로 인해 상단메뉴가 사라질수 있기 때문에
+        // 기준값을 살짝 늘려줌, 터치 윗방향 스와이프만 설정.
+        // 반대쪽은 무조건 내려와서 기준값이 0이어도 됨.
+        if (deltaY > 30) {
+
+            // 모바일 가로 모드일때 터치시 상단 메뉴 높이 조정
+            $("#top").css({
+                padding: "-50px",
+                height: "-50px"
+            })
+
             $(".store").css({
                 top: "-50px",
             })
@@ -80,6 +91,12 @@ $(function () {
         } ///////////////////////
         ///////////////////////
         else {
+            // 모바일 가로 모드일때 터치시 상단 메뉴 높이 조정
+            $("#top").css({
+                padding: "30px",
+                height: "94px"
+            })
+
             $(".store").css({
                 top: "48px",
             })

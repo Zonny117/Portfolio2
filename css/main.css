@@ -423,32 +423,37 @@ footer {
 }
 
 .ham span {
-    display: block;
+    position: absolute;
     background-color: #fff;
     width: 100%;
     height: 3px;
-    /* 햄버거로 돌아갈때 트랜스폼이 먼저 */
-    transition: margin .3s .5s, transform .3s;
+    /* 햄버거로 돌아갈때 트랜스폼 -> top -> 투명도 순으로 트랜지션 */
+    transition: top .3s .5s, transform .3s, opacity .3s .6s;
 }
 
-.ham span:first-child{
-    margin-bottom: 8px;
+/* 햄버거 버튼 각 span 포지션 설정 top으로 통일 */
+.ham span:first-child {
+    top: 0;
 }
 
-.ham span:nth-child(2){
-    margin: 8px 0;
+.ham span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
 }
 
-.ham span:last-child{
-    margin-top: 8px;
+.ham span:last-child {
+    top: 100%;
 }
 
-.ham.on span{
+/* 햄버거버튼 클래스 on 설정 */
+.ham.on span {
     margin: 0;
-    /* 엑스표시 될때 마진이 먼저 트랜지션 */
-    transition: margin .3s, transform .3s .5s;
+    /* 엑스표시 될때 top이 먼저 트랜지션 */
+    transition: top .3s, transform .3s .5s, opacity .3s;
 }
 
+/* 햄버거버튼 클래스 on 각 span 설정*/
 .ham.on span:first-child {
     position: absolute;
     top: 50%;
