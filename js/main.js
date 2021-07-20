@@ -29,8 +29,9 @@ $(function () {
 
 
 
-    /////////////////// //////////모바일 터치 상위 메뉴 이벤트/////////////////////////////////////
-    $(document).on('touchstart touchend', function (e) {
+    /////////////////// //////////모바일 터치 상위 메뉴 이벤트////////////////////////////////////
+
+    $(document).on('touchstart touchend touchmove', function (e) {
         e.stopPropagation();
     });
 
@@ -87,6 +88,11 @@ $(function () {
             $(".mlogo.on").css({
                 top: "13px"
             })
+    
+            $(".store ol").css({
+                opacity: 0
+            });
+
 
         } ///////////////////////
         ///////////////////////
@@ -108,6 +114,10 @@ $(function () {
             $(".mlogo").css({
                 top: "13px"
             })
+
+            $(".store ol").css({
+                opacity: 1
+            });
         } ////////////////////////
 
 
@@ -122,6 +132,19 @@ $(function () {
             } ///////////////////////////
         }); /////////////////////
     }); //////////////////
+
+    // $(document).on('mousemove', function (e) {
+    //     let tM = e.originalEvent.screenY;
+    //     console.log("무브: " + tM)
+
+    //     if(tM)
+    //     $(".store ol").css({
+    //         opacity: 0
+    //     });
+    // })
+
+
+
     ///////////////////////////////////////////////////////////////////////////////////////////
 
 
