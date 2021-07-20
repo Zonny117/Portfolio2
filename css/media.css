@@ -3,8 +3,11 @@
 
 @media only screen and (max-width:760px) {
     body {
-        background: url(../images/bgm.jpg) no-repeat fixed center/cover;
         min-width: unset;
+    }
+    
+    body::after{
+        background: url(../images/bgm.jpg) no-repeat fixed center/cover;
     }
 
     /* 공통 박스 가로크기 */
