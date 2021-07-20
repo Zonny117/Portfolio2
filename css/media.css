@@ -3,13 +3,13 @@
 
 @media only screen and (max-width:760px) {
     body {
-        background: url(../images/bgm.jpg) no-repeat fixed top/cover;
+        background: url(../images/bgm.jpg) no-repeat fixed center/cover;
         min-width: unset;
     }
 
     /* 첫번째 박스 높이값 */
     .mainbx {
-        height: 99.9vh;
+        height: 97vh;
     }
 
     /* 공통 박스 가로크기 */
