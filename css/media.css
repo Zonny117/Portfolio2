@@ -43,6 +43,10 @@
     }
 
     /* 메인로고 */
+    .biglogo{
+        margin-top: 15px;
+    }
+
     .biglogo span {
         font-size: 5vw;
         right: -42%;
