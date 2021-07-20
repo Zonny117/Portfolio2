@@ -120,13 +120,6 @@ footer {
 
 
 /*///////////////////////////////////////////////// 상단영역 /////////////////////////////////*/
-.mainbx {
-    position: relative;
-    width: 100vw;
-    height: 100%;
-}
-
-
 #top {
     position: fixed;
     display: flex;
@@ -174,6 +167,7 @@ footer {
     position: relative;
     /* blogobx 부모자격 */
     height: 100vh;
+    overflow: hidden;
 }
 
 /* 로고 이미지 및 span 글씨 겉박스 */
