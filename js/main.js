@@ -6,11 +6,14 @@
 
 $(function () {
 
+    window.addEventListener('load', function () {
+        setTimeout(scrollTo, 0, 0, 1);
+    }, false);
 
-    // a  기본 이동 막기
-    $("a").click(function (e) {
-        e.preventDefault();
-    }); ///////////////////
+        // a  기본 이동 막기
+        $("a").click(function (e) {
+            e.preventDefault();
+        }); ///////////////////
 
 
     // 햄버거 버튼 클릭시 토글
