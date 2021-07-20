@@ -61,19 +61,10 @@ body {
     min-width: 760px;
     overflow-x: hidden;
     font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
+    background: url(../images/bg.jpg) no-repeat fixed top/cover;
 }
 
 /* 가상요소로 배경화면 살짝 흐리게 / 메뉴 가독성 올리기 */
-body::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.26);
-    z-index: -1;
-}
 
 body::after {
     content: '';
@@ -82,10 +73,8 @@ body::after {
     bottom: 0;
     left: 0;
     right: 0;
-    /* width: 100%; */
-    /* height: 100%; */
-    background: url(../images/bg.jpg) no-repeat fixed top/cover;
-    z-index: -2;
+    background-color: rgba(0, 0, 0, 0.26);
+    z-index: -1;
     /* 애니메이션할때 이거 지워야된다 까먹지마셈 */
     /* animation: body 3s ease-in forwards; */
 }
