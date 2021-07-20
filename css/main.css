@@ -66,7 +66,7 @@ body {
 
 /* 가상요소로 배경화면 살짝 흐리게 / 메뉴 가독성 올리기 */
 
-body::after {
+body::before {
     content: '';
     position: absolute;
     top: 0;
