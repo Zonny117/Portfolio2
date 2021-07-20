@@ -1,14 +1,3 @@
-let vh = window.innerHeight * 0.01;
-
-console.log("뷰포트 높이: " + vh);
-
-document.documentElement.style.setProperty("--vh", `${vh}px`);
-
-window.addEventListener("resize", () => {
-    console.log("resize");
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-});
 
 
 // 제이쿼리 animate로 배경색 및 트랜스폼 변경을 하기 위해선 라이브러리가 필요하다.
