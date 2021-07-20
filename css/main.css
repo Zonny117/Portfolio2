@@ -169,7 +169,8 @@ footer {
 .biglogo {
     position: relative;
     /* blogobx 부모자격 */
-    height: 100vh;
+    /* height: 100%; */
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 /* 로고 이미지 및 span 글씨 겉박스 */
