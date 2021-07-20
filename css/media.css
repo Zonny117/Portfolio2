@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* 미디어쿼리 */
 
-@media only screen and (max-width:760px) {
+@media screen and (max-width:760px) {
     body {
         min-width: unset;
         background: url(../images/bgm.jpg) no-repeat fixed center/cover;
