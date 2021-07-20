@@ -7,11 +7,6 @@
         min-width: unset;
     }
 
-    /* 첫번째 박스 높이값 */
-    .mainbx {
-        height: 97vh;
-    }
-
     /* 공통 박스 가로크기 */
     .wid {
         width: 90%;
