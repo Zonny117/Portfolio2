@@ -7,22 +7,9 @@
         min-width: unset;
     }
 
-    /* 첫번째 박스 높이값 */
-    .mainbx {
-        height: 102vh;
-    }
-
     /* 공통 박스 가로크기 */
     .wid {
         width: 90%;
-    }
-
-    /* 각 섹션 서브구역 공통 비율유지 가상박스 */
-    .mob::before {
-        content: '';
-        display: block;
-        margin-top: 30px;
-        padding-top: 138%;
     }
 
     /* /////////////////////////////상단 영역 ////////////////////*/
@@ -101,9 +88,15 @@
         margin-top: 0;
     }
 
+    .wooheebx::before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+
     .muse {
         position: absolute;
-        bottom: 43%;
+        bottom: 28%;
         left: 0;
     }
 
@@ -113,216 +106,11 @@
         bottom: 0;
         margin-top: unset;
         padding-right: unset;
-        font-size: 3.5vw;
+        font-size: 2.5vw;
     }
 
     .nstory li:nth-child(3) {
-        margin-top: 13px;
-        margin-right: unset;
-    }
-
-    .nstory li:nth-child(3) a::after {
-        position: unset;
-        display: inline-block;
-        margin: unset;
-        vertical-align: middle;
-        transform: scale(0.7);
-    }
-
-    .nstory li:nth-child(3) a:hover::after {
-        transform: unset;
-    }
-
-
-    /* 김혜준 */
-    .hyejun {
-        position: absolute;
-        top: 0;
-        width: 100%;
-    }
-
-    .lookbook {
-        position: absolute;
-        bottom: 43%;
-        left: 0;
-    }
-
-    .makeup {
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        margin: unset;
-        padding: unset;
-        font-size: 3.5vw;
-    }
-
-    .makeup li:nth-child(3) {
-        float: right;
-        margin-top: 13px;
-        margin-right: unset;
-    }
-
-    .makeup li:nth-child(3) a::after {
-        display: inline-block;
-        vertical-align: middle;
-        transform: scale(0.7);
-        position: unset;
-        margin: unset;
-    }
-
-    .makeup li:nth-child(3) a:hover::after {
-        transform: unset;
-    }
-
-
-    /* 플라워가든 */
-    .fgImg {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-    }
-
-    .flowerGarden {
-        position: absolute;
-        bottom: 43%;
-        left: 0;
-    }
-
-
-    .fgtest {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        margin: unset;
-        padding: unset;
-        font-size: 3.5vw;
-    }
-
-    .fgtest li:nth-child(5) {
-        margin-top: 13px;
-        margin-right: unset;
-    }
-
-    .fgtest li:nth-child(5) a::after {
-        display: inline-block;
-        vertical-align: middle;
-        transform: scale(0.7);
-        position: unset;
-        margin: unset;
-    }
-
-
-    /* /////////////////////////////////////////////// 섹션2////////////////////////////////////////// */
-    .facetxt {
-        margin-top: 30px;
-        padding: unset;
-    }
-
-    .face {
-        padding: unset;
-    }
-
-
-    /* 페이스 컨텐츠1 */
-    .fc1 {
-        position: relative;
-        margin-top: 30px;
-        margin-left: unset;
-        padding: unset;
-        width: 100%;
-    }
-
-    .fc1 a {
-        width: 100%;
-        right: 0;
-    }
-
-    .fc1 a::before {
-        padding-top: 132%;
-    }
-
-    .fc1 h2 {
-        font-size: 4vw;
-    }
-
-    /* 페이스 컨텐츠2 */
-    .fc2 {
-        margin-top: 30px;
-        padding: unset;
-        width: 100%;
-        transform: unset;
-    }
-
-    .fc2 a {
-        left: 0;
-        width: 100%;
-        transform: unset;
-    }
-
-    .fc2 a::before {
-        padding-top: 132%;
-    }
-
-    .fc2 h2 {
-        font-size: 6vw;
-    }
-
-
-    /* 페이스 컨텐츠3 */
-    .fc3 {
-        width: 100%;
-        margin-top: 30px;
-        margin-left: unset;
-        transform: unset;
-    }
-
-    .fc3 a {
-        width: 100%;
-        left: 0;
-        transform: unset;
-    }
-
-    .fc3 a::before {
-        padding-top: 132%;
-    }
-
-    .fc3 span {
-        font-size: 3vw !important;
-    }
-
-    /* 페이스 컨텐츠4 */
-    .fc4 {
-        margin-top: 30px;
-    }
-
-    .fc4 a {
-        position: relative;
-        transform: unset;
-        width: 100%;
-        left: 0;
-    }
-
-    .fc4 a::before {
-        padding-top: 132%;
-    }
-
-    /* //////////////////////////////////////////////////////섹션3////////////////////////////////////////////// */
-}
-
-
-/* 스토리 십자 버튼 크기 줄이기 */
-@media only screen and (max-width:580px) {
-    .nstory li:nth-child(3) a::after {
-        transform: scale(0.6);
-    }
-
-    .makeup li:nth-child(3) a:hover::after {
-        transform: scale(0.6);
-    }
-
-    .fgtest li:nth-child(5) a::after {
-        transform: scale(0.6);
+        margin-top: 23px;
     }
 
 }
