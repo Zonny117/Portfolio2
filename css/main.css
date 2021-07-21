@@ -6,7 +6,6 @@
 /* font-family: 'Noto Sans KR', sans-serif; */
 /* font-family: 'Public Sans', sans-serif; */
 
-/* 모바일 화면시 오른쪽 여백 제거하기 위해 html, body에 공통으로 overflow-x=hidden 설정 */
 body,
 html,
 h1,
@@ -50,7 +49,11 @@ a {
 }
 
 html {
-    overflow-x: hidden;
+    width: 100%;
+    height: 99.9%;
+    /* 모바일 vh 이슈를 처리하기 위한 높이값 */
+    overflow: hidden;
+    /* 모바일 vh 이슈를 처리하기 위한 숨김기능 */
 }
 
 /* 배경화면 및 폰트 세팅 */
@@ -58,8 +61,9 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    min-width: 760px;
+    /* 모바일 vh 이슈를 처리하기 위한 높이값 */
     overflow: hidden;
+    /* 모바일 vh 이슈를 처리하기 위한 숨김기능 */
     font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
     background: url(../images/bg.jpg) no-repeat fixed top/cover;
 }
@@ -103,6 +107,13 @@ footer {
     outline: 2px dashed #ccc;
 }
 
+/* 모바일 vh 이슈를 처리하기 위한 모든 컨텐츠의 부모박스 */
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 /* 양쪽 마진 공통 클래스 */
 .wid {
@@ -120,7 +131,6 @@ footer {
     bottom: 0;
     padding: 10%;
 }
-
 
 /*///////////////////////////////////////////////// 상단영역 /////////////////////////////////*/
 #topbx {
@@ -175,7 +185,7 @@ footer {
 .biglogo {
     position: relative;
     /* blogobx 부모자격 */
-    height: 100vh;
+    height: 100%;
 }
 
 /* 로고 이미지 및 span 글씨 겉박스 */
@@ -348,8 +358,8 @@ footer {
     font-family: 'Public Sans', sans-serif;
     font-weight: bold;
     overflow: hidden;
-    transition: .6s ease-in-out;
     opacity: 0;
+    transition: .6s ease-in-out;
 }
 
 #top2.on {

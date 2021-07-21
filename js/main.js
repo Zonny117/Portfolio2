@@ -1,10 +1,47 @@
-
-
 // 제이쿼리 animate로 배경색 및 트랜스폼 변경을 하기 위해선 라이브러리가 필요하다.
 // jqueryUI (배경 애니메이트 가능), jquery.transform.js(트랜스폼 애니메이트 가능)
 // 그라데이션 트랜지션 기능은 현재 구현 불가능
 ///////////////JQB
 $(function () {
+
+    $(window).on('load', function () {
+
+        // 네이버 모바일 앱 브라우저에서 url바와 실제 vh 계산이 일치하지 않아
+        // 기존 세팅을 네이버 앱 브라우저에서만 출력시킴.
+        let test = (/naver/i.test(navigator.userAgent));
+        // console.log(test);
+
+        let winW = window.innerWidth;
+        // console.log(winW);
+
+        // 뷰포트 가로크기가 760이하이고 현재 사용 브라우저가 naver라면 아래 코드 실행
+        if (winW <= 760 && test) {
+
+            $("html").css({
+                height: "auto",
+                overflowX: "hidden",
+                overflowY: "auto"
+                // overflow: "unset"이 아닌 기존 css에 따로 잡아준걸
+                // 하나하나 다 풀어야된다.
+            });
+
+            $("body").css({
+                height: "100%",
+                overflowX: "hidden",
+                overflowY: "auto"
+            });
+
+            $(".biglogo").css({
+                height: "100vh"
+            });
+
+            // #topbx의 부모요소 모바일 브라우저 vh 이슈를 처리하기위해 세팅한 .wrap박스를 제거한다.
+            $("#topbx").unwrap();
+
+        };
+
+    }); ///////////////////////////////////////////////////
+
 
     // a  기본 이동 막기
     $("a").click(function (e) {

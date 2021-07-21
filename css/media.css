@@ -3,7 +3,6 @@
 
 @media only screen and (max-width:760px) {
     body {
-        min-width: unset;
         background: url(../images/bgm.jpg) no-repeat fixed center/cover;
     }
 
@@ -79,9 +78,23 @@
 
     /* 햄버거 버튼 */
     .ham {
-        top: 46px;
+        top: 48px;
         width: 30px;
         right: 19px;
+        height: 13px;
+    }
+
+    .ham span:nth-child(2) {
+        transform: translateY(-17%)
+    }
+
+    #top2 {
+        display: block;
+    }
+
+    #top2.on {
+        opacity: 1;
+        height: 100vh;
     }
 
 
@@ -298,15 +311,326 @@
         left: 0;
     }
 
+    .fc4 span {
+        font-size: 3vw;
+    }
+
     .fc4 a::before {
         padding-top: 132%;
     }
 
     /* //////////////////////////////////////////////////////섹션3////////////////////////////////////////////// */
+
+    .liptxt {
+        padding: unset;
+        margin-top: 30px;
+    }
+
+    .lip {
+        padding: unset;
+        margin-top: 67px;
+    }
+
+    /* 립 컨텐츠 1 */
+    .lip1 {
+        margin: unset;
+        width: 100%;
+    }
+
+    .lip1 a {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .lip1 a::before {
+        padding-top: 132%;
+    }
+
+    /* 립 컨텐츠 2 */
+    .lip2 {
+        transform: unset;
+        margin-top: 30px;
+        width: 100%;
+        margin-left: unset;
+    }
+
+    .lip2 a {
+        width: 100%;
+        right: unset;
+    }
+
+    .lip2 a::before {
+        padding-top: 132%;
+    }
+
+    .lip2 h2 {
+        font-size: 6vw;
+    }
+
+    /* 립 컨텐츠 3 */
+    .lip3 {
+        transform: unset;
+        margin-top: 30px;
+        width: 100%;
+        margin-right: unset;
+    }
+
+    .lip3 a {
+        width: 100%;
+        left: unset;
+    }
+
+    .lip3 a::before {
+        padding-top: 132%;
+    }
+
+    .lip3 h2 {
+        font-size: 6vw;
+    }
+
+    .lip3 h3 {
+        font-size: 3vw;
+    }
+
+    /* 립 컨텐츠 4  */
+    .lip4 {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .lip4 a {
+        right: unset;
+        width: 100%;
+        position: relative;
+        transform: unset;
+    }
+
+    .lip4 span {
+        font-size: 3vw;
+    }
+
+    .lip4 a::before {
+        padding-top: 132%;
+    }
+
+
+    /* ////////////////////////////////////////////////////// 섹션4///////////////////////// */
+    .eyetxt {
+        padding: unset;
+        margin-top: 30px;
+    }
+
+    .eye {
+        padding: unset;
+    }
+
+    /* 아이 컨텐츠 1 */
+    .eye1 {
+        margin-top: 30px;
+        margin-left: unset;
+        width: 100%;
+    }
+
+    .eye1 a {
+        width: 100%;
+        right: unset;
+    }
+
+    .eye1 a::before {
+        padding-top: 132%;
+    }
+
+    /* 아이 컨텐츠 2 */
+    .eye2 {
+        transform: unset;
+        width: 100%;
+        margin-right: unset;
+        margin-top: 30px;
+    }
+
+    .eye2 a {
+        width: 100%;
+    }
+
+    .eye2 a::before {
+        padding-top: 132%;
+    }
+
+    .eye2 span {
+        font-size: 3vw !important;
+    }
+
+    /* 아이 컨텐츠 3 */
+    .eye3 {
+        transform: unset;
+        width: 100%;
+        margin-left: unset;
+        margin-top: 30px;
+    }
+
+    .eye3 a {
+        width: 100%;
+        left: unset;
+    }
+
+    .eye3 h2 {
+        position: unset;
+        bottom: unset;
+        font-size: 6vw;
+        margin-top: 30px;
+    }
+
+    .eye3 h3 {
+        font-size: 3vw;
+    }
+
+    .eye3 a::before {
+        padding-top: 132%;
+    }
+
+    /* 아이 컨텐츠 4 */
+    .eye4 {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .eye4 a {
+        position: relative;
+        transform: unset;
+        width: 100%;
+        left: unset;
+    }
+
+    .eye4 a::before {
+        padding-top: 132%;
+    }
+
+    .eye4 span {
+        font-size: 3vw;
+    }
+
+    /* /////////////////////////////////////////////////섹션 5/////////////////////////////////////// */
+
+    .skintxt {
+        padding: unset;
+        margin-top: 30px;
+    }
+
+    .skincare {
+        padding-right: unset;
+    }
+
+    /* 스킨 컨텐츠 1 */
+    .skin1 {
+        margin-right: unset;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .skin1 a {
+        width: 100%;
+    }
+
+    .skin1 a::before {
+        padding-top: 132%;
+    }
+
+    /* 스킨 컨텐츠 2 */
+    .skin2 {
+        margin-left: unset;
+        margin-top: 30px;
+        width: 100%;
+        transform: unset;
+    }
+
+    .skin2 a {
+        width: 100%;
+        right: unset;
+    }
+
+    .skin2 h2 {
+        font-size: 6vw;
+    }
+
+    .skin2 a::before {
+        padding-top: 132%;
+    }
+
+    /* 스킨 컨텐츠 3 */
+
+    .skin3 {
+        margin-top: 30px;
+        margin-right: unset;
+        width: 100%;
+        transform: unset;
+    }
+
+    .skin3 a {
+        width: 100%;
+        left: unset;
+    }
+
+    .skin3 span {
+        font-size: 3vw !important;
+    }
+
+    .skin3 a::before {
+        padding-top: 132%;
+    }
+
+    /* 스킨 컨텐츠 4 */
+    .skin4 {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .skin4 a {
+        position: relative;
+        width: 100%;
+        right: unset;
+        transform: unset;
+    }
+
+    .skin4 span {
+        font-size: 3vw;
+    }
+
+    .skin4 a::before {
+        padding-top: 132%;
+    }
+
+    /* 푸터 영역 */
+    footer{
+        margin-top: 565px;
+    }
+    
+    .footbx{
+        padding: 40px 0px;
+    }
+
+    address{
+        font-size: 11px;
+        line-height: 6px;
+    }
+
+    .emailbx{
+        font-size: 11px;
+        line-height: 6px;
+    }
+    
+    .family>li>a{
+        font-size: 10px;
+    }
+
+    .sns img{
+        width: 26px;
+        height: 26px;
+    }
+
 }
 
 
-/* 스토리 십자 버튼 크기 줄이기 */
+/* 가로 580px에서 스토리 십자 버튼 크기 줄이기 */
 @media only screen and (max-width:580px) {
     .nstory li:nth-child(3) a::after {
         transform: scale(0.6);
@@ -328,5 +652,9 @@
 
     .store {
         right: 63px;
+    }
+
+    .eye3 h2 {
+        margin-top: 17px;
     }
 }
