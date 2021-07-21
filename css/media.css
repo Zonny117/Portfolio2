@@ -2,13 +2,8 @@
 /* 미디어쿼리 */
 
 @media only screen and (max-width:760px) {
-    * {
-        margin: 0 auto;
-        padding: 0;
-    }
-
     body {
-        min-width: unset;
+        /* min-width: unset; */
         background: url(../images/bgm.jpg) no-repeat fixed center/cover;
     }
 
@@ -311,7 +306,7 @@
 }
 
 
-/* 스토리 십자 버튼 크기 줄이기 */
+/* 가로 580px에서 스토리 십자 버튼 크기 줄이기 */
 @media only screen and (max-width:580px) {
     .nstory li:nth-child(3) a::after {
         transform: scale(0.6);
