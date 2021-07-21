@@ -13,14 +13,14 @@ $(function () {
         console.log(winW);
 
         if (winW <= 760 && test) {
-            
+
             $("html, body").css({
                 height: "100%",
                 overflowX: "hidden"
             })
 
             $(".wrap").css({
-                overflow: "unset"
+                display: "none"
             })
 
             $(".biglogo").css({
