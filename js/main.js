@@ -19,11 +19,14 @@ $(function () {
 
             $("html").css({
                 height:"unset",
-                overflowX: "hidden"
+                overflowX: "hidden",
+                overflowY:"unset"
             })
 
             $("body").css({
-                overflowX: "hidden"
+                height:"100%",
+                overflowX: "hidden",
+                overflowY:"unset"
             })
 
             $(".biglogo").css({
@@ -31,6 +34,7 @@ $(function () {
             })
 
             $("#topbx").unwrap()
+    
         };
 
     }); ///////////////////////////////////////////////////
