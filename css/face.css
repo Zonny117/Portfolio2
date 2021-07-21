@@ -225,6 +225,11 @@
 /*////////////////////////////////////////////////////// 서브페이지 미디어쿼리 ///////////////////////////////////*/
 @media only screen and (max-width:760px) {
 
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
     body {
         background: url(../images/bg2m.jpg) no-repeat fixed center/cover;
     }
@@ -241,12 +246,12 @@
     }
 
     /* 각 컨텐츠 글자 크기 수정 */
-    #cc h2{
+    #cc h2 {
         font-size: 6vw;
 
     }
 
-    .fc3 span{
+    .fc3 span {
         font-size: 3vw !important;
     }
 
@@ -324,11 +329,12 @@
         height: 100vh;
     }
 
-    #product ul{
+    #product ul {
         margin-top: 94px;
     }
 
-    #product, #about{
+    #product,
+    #about {
         margin-top: 7%;
     }
 

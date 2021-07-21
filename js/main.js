@@ -4,6 +4,7 @@
 ///////////////JQB
 $(function () {
 
+    // 스크롤 플러그인 호출
     $(window).easeScroll();
 
     $(window).on('load', function () {

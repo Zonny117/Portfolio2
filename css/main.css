@@ -6,6 +6,10 @@
 /* font-family: 'Noto Sans KR', sans-serif; */
 /* font-family: 'Public Sans', sans-serif; */
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 body,
 html,
 h1,
@@ -78,7 +82,7 @@ body::before {
     left: 0;
     right: 0;
     z-index: -1;
-    animation: body 2s ease-in forwards;
+    animation: body 2s ease-in-out forwards;
 }
 
 /* 배경 투명 키프레임 */
@@ -302,6 +306,7 @@ footer {
 
 
     opacity: 0;
+    padding-left: 15px;
     height: 0;
     overflow: hidden;
     transition: opacity .6s ease-in-out;
@@ -324,7 +329,7 @@ footer {
     overflow: hidden;
 }
 
-body .store>li:hover ol {
+.store>li:hover ol {
     opacity: 1;
     height: 80px;
     padding: 15px;

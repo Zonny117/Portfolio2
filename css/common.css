@@ -30,6 +30,11 @@ body {
 
 /* 가상요소로 배경화면 살짝 흐리게 / 메뉴 가독성 올리기 */
 
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
+
 body::before {
     content: '';
     position: absolute;
@@ -38,7 +43,7 @@ body::before {
     left: 0;
     right: 0;
     z-index: -1;
-    animation: body 2s ease-in forwards;
+    animation: body 2s ease-in-out forwards;
 }
 
 @keyframes body {
