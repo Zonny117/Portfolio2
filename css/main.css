@@ -50,9 +50,10 @@ a {
 }
 
 html {
-    overflow-x: hidden;
+    width: 100%;
+    height: 99.9%;
+    overflow: hidden;
 }
-
 
 /* 배경화면 및 폰트 세팅 */
 body {
@@ -60,20 +61,23 @@ body {
     width: 100%;
     height: 100%;
     min-width: 760px;
-    overflow-x: hidden;
+    overflow: hidden;
     font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
     background: url(../images/bg.jpg) no-repeat fixed top/cover;
 }
 
 /* 가상요소로 배경화면 살짝 흐리게 / 메뉴 가독성 올리기 */
+
 body::before {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.295);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.26);
     z-index: -1;
-    /* 애니메이션할때 이거 지워야된다 까먹지마셈*/
+    /* 애니메이션할때 이거 지워야된다 까먹지마셈 */
     /* animation: body 3s ease-in forwards; */
 }
 
@@ -93,8 +97,6 @@ section {
     position: relative;
     width: 100%;
 }
-
-
 
 /* 임시 테두리 */
 main,
@@ -121,17 +123,22 @@ footer {
     padding: 10%;
 }
 
+.wrap{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 /*///////////////////////////////////////////////// 상단영역 /////////////////////////////////*/
-.mainbx {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+#topbx {
+    width: 100%;
+    height: 100%;
 }
 
 
 #top {
     position: fixed;
-    display: flex;
+    top: 0;
     width: 100%;
     height: 114px;
     padding: 30px;
@@ -175,7 +182,7 @@ footer {
 .biglogo {
     position: relative;
     /* blogobx 부모자격 */
-    height: 100%;
+    height: 100vh;
 }
 
 /* 로고 이미지 및 span 글씨 겉박스 */
@@ -338,6 +345,8 @@ footer {
 #top2 {
     display: flex;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 0px;
     box-sizing: border-box;
@@ -346,10 +355,12 @@ footer {
     font-family: 'Public Sans', sans-serif;
     font-weight: bold;
     overflow: hidden;
-    transition: .6s;
+    transition: .6s ease-in-out;
+    opacity: 0;
 }
 
 #top2.on {
+    opacity: 1;
     height: 450px;
 }
 
@@ -359,8 +370,6 @@ footer {
     margin-left: 15%;
     margin-top: 100px;
 }
-
-
 
 #product li,
 #about li {
