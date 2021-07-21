@@ -18,15 +18,15 @@ $(function () {
         if (winW <= 760 && test) {
 
             $("html").css({
-                height:"unset",
+                height: "auto",
                 overflowX: "hidden",
-                overflowY:"unset"
+                overflowY: "auto"
             })
 
             $("body").css({
-                height:"100%",
+                height: "100%",
                 overflowX: "hidden",
-                overflowY:"unset"
+                overflowY: "auto"
             })
 
             $(".biglogo").css({
@@ -34,7 +34,7 @@ $(function () {
             })
 
             $("#topbx").unwrap()
-    
+
         };
 
     }); ///////////////////////////////////////////////////
