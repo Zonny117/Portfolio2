@@ -14,7 +14,12 @@ $(function () {
 
         if (winW <= 760 && test) {
 
-            $("html, body").css({
+            $("html").css({
+                height:"unset",
+                overflowX:"hidden"
+            })
+
+            $("body").css({
                 height: "100%",
                 overflowX: "hidden"
             })
@@ -28,7 +33,7 @@ $(function () {
             })
         };
 
-    })
+    });///////////////////////////////////////////////////
 
 
     // a  기본 이동 막기
