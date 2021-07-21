@@ -10,7 +10,7 @@ $(function () {
             overflowX: "hidden"
         })
 
-        $("wrap").css({
+        $(".wrap").css({
             overflow: "unset"
         })
     };
