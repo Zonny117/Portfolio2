@@ -9,8 +9,6 @@ $(function () {
         // let t = navigator.userAgent;
         // console.log(t);
 
-
-
         let test = (/naver/i.test(navigator.userAgent));
         console.log(test);
 
@@ -20,24 +18,19 @@ $(function () {
         if (winW <= 760 && test) {
 
             $("html").css({
-                height: "auto",
+                height:"unset",
                 overflowX: "hidden"
             })
 
             $("body").css({
-                height: "100%",
                 overflowX: "hidden"
             })
 
-            $(".wrap").css({
-                // display: "none",
-                height:"100vh",
-                overflowY:"unset"
+            $(".biglogo").css({
+                height: "100vh"
             })
 
-            // $(".biglogo").css({
-            //     height: "100vh"
-            // })
+            $("#topbx").unwrap()
         };
 
     }); ///////////////////////////////////////////////////
