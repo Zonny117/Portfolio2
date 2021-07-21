@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+.facebx {
+    margin-top: 200px;
+    width: 100%;
+    height: auto;
+}
+
+.facebx2 {
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.facebx2>div {
+    flex: 1;
+}
+
+/* 우선순위 메인 로고 위 문구 디자인 */
+body .biglogo span {
+    font-size: 1.5vw;
+    letter-spacing: normal;
+}
+
+
+/* face 컨텐츠 - 파운데이션 */
+.fc1 {
+    /* position: relative; */
+    margin-top: 200px;
+    margin-left: 50%;
+    padding: 3.6%;
+    box-sizing: border-box;
+    width: 50%;
+    color: #000;
+}
+
+.fc1 a {
+    position: relative;
+    right: -7.3vw;
+    width: 31.2vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+
+/* 비율유지 가상 박스 */
+.fc1 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+.fc1 h2 {
+    font-size: 3vw;
+    white-space: nowrap;
+}
+
+.fc1 span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    font-weight: lighter;
+}
+
+.fc1 span:nth-of-type(2) {
+    margin-top: 23px;
+    color: #ccc;
+}
+
+.fc1 span:nth-of-type(3) {
+    margin-top: 23px;
+}
+
+.fc1 img {
+    position: absolute;
+    bottom: 7%;
+    right: 10.5%;
+    width: 80%;
+    transition: opacity .6s;
+}
+
+.fc1 a:hover img {
+    opacity: .6;
+}
+
+
+
+
+
+/* face 컨텐츠2 - 뷰티 밤 */
+
+.fc2 {
+    /* position: relative; */
+    margin-right: 50%;
+    padding: 3.6%;
+    box-sizing: border-box;
+    width: 50%;
+    color: #000;
+    transform: translateY(-40%);
+    /* 위치값으로 배치하면 화면크기에 따라 위치값이 상대적으로 변하므로 트랜스폼으로 위치를 고정시킨다. (중요!!!) */
+}
+
+.fc2 a {
+    position: relative;
+    left: -2.9vw;
+    width: 31.2vw;
+    box-sizing: border-box;
+    display: block;
+    background: linear-gradient(180deg, #ac8d73 0%, #e8d8cb 100%);
+    color: #fff;
+    border-radius: 10px;
+    transform: translateY(-10%);
+    overflow: hidden;
+}
+
+.fc2 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+.fc2 h2 {
+    margin-top: 8px;
+    font-size: 3vw;
+    white-space: nowrap;
+    line-height: 110%;
+}
+
+.fc2 span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.fc2 span:nth-of-type(2) {
+    margin-top: 23px;
+    color: #fff;
+}
+
+.fc2 img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    transition: opacity .6s;
+}
+
+.fc2 a:hover img {
+    opacity: .6;
+}
+
+
+
+/* face 컨텐츠 3 - 퍼펙션 */
+.fc3 {
+    width: 50%;
+    margin-left: 50%;
+    box-sizing: border-box;
+    color: #000;
+    transform: translateY(-71%);
+}
+
+.fc3 a {
+    position: relative;
+    width: 31.2vw;
+    left: .5vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+    background: url(../images/face_3.jpg) no-repeat center/100% 100%;
+    transform: translateY(-14%);
+}
+
+.fc3 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+
+.fc3 span {
+    display: block;
+    font-weight: lighter;
+    white-space: nowrap;
+}
+
+.fc3 span:nth-of-type(1) {
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.fc3 span:nth-of-type(2) {
+    margin-top: 23px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.fc3 span:nth-of-type(3) {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+
+}
+
+.fc3 span:nth-of-type(4) {
+    margin-top: 23px;
+}
+
+.fc3 a:hover img {
+    opacity: .6;
+}
+
+.fc3 h2 {
+    position: absolute;
+    bottom: 8%;
+    font-size: 3vw;
+    white-space: nowrap;
+}
+
+
+
+/*////////////////////////////////////////////////////// 서브페이지 미디어쿼리 ///////////////////////////////////*/
+@media only screen and (max-width:760px) {
+
+    body {
+        background: url(../images/bg2m.jpg) no-repeat fixed center/cover;
+    }
+
+    /* 공통 박스 가로크기 */
+    .wid {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    /* 각 컨텐츠 패딩 리셋 */
+    body #cbx {
+        padding: 30px 0;
+    }
+
+    /* /////////////////////////////상단 영역 ////////////////////*/
+
+    /* 네비게이션 */
+    .gnb {
+        display: none;
+    }
+
+    /* 상단로고 */
+    .mlogo {
+        top: 13px;
+        left: 16px;
+    }
+
+    .mlogo.on {
+        top: 13px;
+        left: 16px;
+    }
+
+    .mlogo img {
+        line-height: 30px;
+    }
+
+    /* 메인로고 */
+    .biglogo span {
+        font-size: 5vw;
+        right: -42%;
+    }
+
+    .biglogo img {
+        width: 76vw;
+    }
+
+    /* 상단 상점 메뉴 */
+    .store {
+        top: 48px;
+        right: 82px;
+    }
+
+    .storeTit {
+        font-size: 12px;
+    }
+
+    .storeTit::after {
+        top: 4px;
+        margin-left: 5px;
+        transform: rotate(270deg) scale(.7);
+
+    }
+
+    .store>li:hover .storeTit::after {
+        transform: rotate(90deg) scale(.7);
+    }
+
+    .store ol {
+        width: 153px;
+    }
+
+    /* 햄버거 버튼 */
+    .ham {
+        top: 48px;
+        width: 30px;
+        right: 19px;
+        height: 13px;
+    }
+
+    .ham span:nth-child(2) {
+        transform: translateY(-17%)
+    }
+
+
+    #top2 {
+        display: block;
+    }
+
+    #top2.on {
+        opacity: 1;
+        height: 100vh;
+    }
+
+    #product {
+        margin-top: 169px;
+    }
+
+    #product li:hover a::after,
+    #about li:hover a::after {
+        width: 30%;
+        border-bottom: 3px solid #fff;
+    }
+
+    /* 푸터 영역 */
+    footer {
+        margin-top: 632px;
+    }
+
+    .footbx {
+        padding: 40px 0px;
+    }
+
+    address {
+        font-size: 11px;
+        line-height: 6px;
+    }
+
+    .emailbx {
+        font-size: 11px;
+        line-height: 6px;
+    }
+
+    .family>li>a {
+        font-size: 10px;
+    }
+
+    .sns img {
+        width: 26px;
+        height: 26px;
+    }
+
+}
+
+
+/* 가로 580px에서 스토리 십자 버튼 크기 줄이기 */
+@media only screen and (max-width:580px) {
+    .nstory li:nth-child(3) a::after {
+        transform: scale(0.6);
+    }
+
+    .makeup li:nth-child(3) a:hover::after {
+        transform: scale(0.6);
+    }
+
+    .fgtest li:nth-child(5) a::after {
+        transform: scale(0.6);
+    }
+
+}
+
+/* 갤럭시 폴드 */
+@media only screen and (max-width:300px) {
+
+    .store {
+        right: 63px;
+    }
+
+}

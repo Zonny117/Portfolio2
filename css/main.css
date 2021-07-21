@@ -68,8 +68,8 @@ body {
     background: url(../images/bg.jpg) no-repeat fixed top/cover;
 }
 
-/* 가상요소로 배경화면 살짝 흐리게 / 메뉴 가독성 올리기 */
 
+/* 가상요소로 배경화면 살짝 흐리게 / 메뉴 가독성 올리기 */
 body::before {
     content: '';
     position: absolute;
@@ -77,19 +77,18 @@ body::before {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.26);
     z-index: -1;
-    /* 애니메이션할때 이거 지워야된다 까먹지마셈 */
-    /* animation: body 3s ease-in forwards; */
+    animation: body 2s ease-in forwards;
 }
 
+/* 배경 투명 키프레임 */
 @keyframes body {
     from {
         background-color: rgb(216, 216, 216);
     }
 
     to {
-        background-color: rgba(0, 0, 0, 0.295);
+        background-color: rgba(0, 0, 0, 0.445);
     }
 }
 
@@ -101,11 +100,11 @@ section {
 }
 
 /* 임시 테두리 */
-main,
+/* main,
 section,
 footer {
     outline: 2px dashed #ccc;
-}
+} */
 
 /* 모바일 vh 이슈를 처리하기 위한 모든 컨텐츠의 부모박스 */
 .wrap {
@@ -119,7 +118,7 @@ footer {
 .wid {
     width: calc(100% - 16.33%);
     margin: 0 auto;
-    outline: 2px dotted blue;
+    /* outline: 2px dotted blue; */
 }
 
 /* 가상 속박스 공통 클래스*/
@@ -199,11 +198,11 @@ footer {
 .biglogo img {
     display: block;
     width: 45vw;
-    opacity: 1;
-    /* 애니메이션 작업할때 0으로 */
-    /* animation: bimg .5s ease-in 3s forwards; */
+    opacity: 0;
+    animation: bimg .5s ease-in 2s forwards;
 }
 
+/* 메인 로고 키프레임 */
 @keyframes bimg {
     to {
         opacity: 1;
@@ -212,19 +211,18 @@ footer {
 
 .biglogo span {
     position: absolute;
-    right: 0;
+    right: -5vw;
     white-space: nowrap;
     font-size: 2.08vw;
     color: #fff;
     letter-spacing: -2px;
-    opacity: 1;
-    /* 애니메이션 용 */
-    /* animation: bspan .5s ease-in-out 3.3s forwards; */
+    opacity: 0;
+    animation: bspan 1s ease-in-out 2.5s forwards;
 }
 
 @keyframes bspan {
     to {
-        /* right: -84px;  left %로 수정할 예정*/
+        right: 0;
         opacity: 1;
     }
 }

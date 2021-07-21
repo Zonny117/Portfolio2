@@ -88,6 +88,7 @@
         transform: translateY(-17%)
     }
 
+
     #top2 {
         display: block;
     }
@@ -97,6 +98,15 @@
         height: 100vh;
     }
 
+    #product {
+        margin-top: 169px;
+    }
+
+    #product li:hover a::after,
+    #about li:hover a::after {
+        width: 30%;
+        border-bottom: 3px solid #fff;
+    }
 
     /* ///////////////////////섹션 1///////////////////////////// */
 
@@ -251,7 +261,7 @@
     }
 
     .fc1 h2 {
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     /* 페이스 컨텐츠2 */
@@ -337,6 +347,10 @@
         width: 100%;
     }
 
+    .lip1 h2 {
+        font-size: 6vw;
+    }
+
     .lip1 a {
         width: 100%;
         margin-top: 30px;
@@ -389,7 +403,7 @@
     }
 
     .lip3 h3 {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     /* 립 컨텐츠 4  */
@@ -429,6 +443,10 @@
         margin-top: 30px;
         margin-left: unset;
         width: 100%;
+    }
+
+    .eye1 h2 {
+        font-size: 6vw;
     }
 
     .eye1 a {
@@ -481,7 +499,7 @@
     }
 
     .eye3 h3 {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .eye3 a::before {
@@ -525,6 +543,10 @@
         margin-right: unset;
         margin-top: 30px;
         width: 100%;
+    }
+
+    .skin1 h2 {
+        font-size: 6vw;
     }
 
     .skin1 a {
@@ -600,29 +622,29 @@
     }
 
     /* 푸터 영역 */
-    footer{
-        margin-top: 565px;
+    footer {
+        margin-top: 632px;
     }
-    
-    .footbx{
+
+    .footbx {
         padding: 40px 0px;
     }
 
-    address{
+    address {
         font-size: 11px;
         line-height: 6px;
     }
 
-    .emailbx{
+    .emailbx {
         font-size: 11px;
         line-height: 6px;
     }
-    
-    .family>li>a{
+
+    .family>li>a {
         font-size: 10px;
     }
 
-    .sns img{
+    .sns img {
         width: 26px;
         height: 26px;
     }
@@ -649,6 +671,11 @@
 
 /* 갤럭시 폴드 */
 @media only screen and (max-width:300px) {
+
+    .eye1 img {
+        width: 60%;
+        right: 21.5%;
+    }
 
     .store {
         right: 63px;

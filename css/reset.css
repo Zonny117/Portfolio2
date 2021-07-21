@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+body,
+html,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* [스크롤바 가로크기] */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* [스크롤바 배경색, 모서리 둥글게] */
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 10px;
+}
+
+/* [스크롤바 트랙 배경색, 모서리 둥글게] */
+::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 5px;
+}
+
+
+/* 각 컨텐츠 디자인 리셋 */
+
+
+body #cbx {
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+    transform: unset;
+}
+
+body #cc {
+    position: relative;
+    right: unset;
+    width: auto;
+    transform: unset;
+    left: unset;
+    right: unset;
+}

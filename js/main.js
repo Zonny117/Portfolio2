@@ -4,6 +4,8 @@
 ///////////////JQB
 $(function () {
 
+    $(window).easeScroll();
+
     $(window).on('load', function () {
 
         // 네이버 모바일 앱 브라우저에서 url바와 실제 vh 계산이 일치하지 않아
@@ -44,8 +46,11 @@ $(function () {
 
 
     // a  기본 이동 막기
-    $("a").click(function (e) {
+    $(".gnb a").click(function (e) {
+
         e.preventDefault();
+
+
     }); ///////////////////
 
 
