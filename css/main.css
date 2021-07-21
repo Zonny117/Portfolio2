@@ -107,6 +107,13 @@ footer {
     outline: 2px dashed #ccc;
 }
 
+/* 전체박스 */
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 /* 양쪽 마진 공통 클래스 */
 .wid {
@@ -123,14 +130,6 @@ footer {
     right: 0;
     bottom: 0;
     padding: 10%;
-}
-
-/* 전체박스 */
-.wrap {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 /*///////////////////////////////////////////////// 상단영역 /////////////////////////////////*/
@@ -359,8 +358,8 @@ footer {
     font-family: 'Public Sans', sans-serif;
     font-weight: bold;
     overflow: hidden;
-    transition: .6s ease-in-out;
     opacity: 0;
+    transition: .6s ease-in-out;
 }
 
 #top2.on {

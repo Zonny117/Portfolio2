@@ -1,10 +1,19 @@
-
-
 // 제이쿼리 animate로 배경색 및 트랜스폼 변경을 하기 위해선 라이브러리가 필요하다.
 // jqueryUI (배경 애니메이트 가능), jquery.transform.js(트랜스폼 애니메이트 가능)
 // 그라데이션 트랜지션 기능은 현재 구현 불가능
 ///////////////JQB
 $(function () {
+
+    if (window.innerWidth <= 760 && /Naver/i.test(navigator.userAgent)) {
+        $("html, body").css({
+            height: "100%",
+            overflowX: "hidden"
+        })
+
+        $("wrap").css({
+            overflow: "unset"
+        })
+    };
 
     // a  기본 이동 막기
     $("a").click(function (e) {

@@ -79,9 +79,23 @@
 
     /* 햄버거 버튼 */
     .ham {
-        top: 46px;
+        top: 48px;
         width: 30px;
         right: 19px;
+        height: 13px;
+    }
+
+    .ham span:nth-child(2) {
+        transform: translateY(-17%)
+    }
+
+    #top2{
+        display: block;
+    }
+
+    #top2.on {
+        opacity: 1;
+        height: 100vh;
     }
 
 
