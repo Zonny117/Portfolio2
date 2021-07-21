@@ -4,16 +4,32 @@
 ///////////////JQB
 $(function () {
 
-    if (window.innerWidth <= 760 && /Naver/i.test(navigator.userAgent)) {
-        $("html, body").css({
-            height: "100%",
-            overflowX: "hidden"
-        })
+    $(window).on('load', function () {
 
-        $(".wrap").css({
-            overflow: "unset"
-        })
-    };
+        let test = (/Naver/i.test(navigator.userAgent));
+        console.log(test);
+
+        let winW = window.innerWidth;
+        console.log(winW);
+
+        if (winW <= 760 && test) {
+            
+            $("html, body").css({
+                height: "100%",
+                overflowX: "hidden"
+            })
+
+            $(".wrap").css({
+                overflow: "unset"
+            })
+
+            $(".biglogo").css({
+                height: "100vh"
+            })
+        };
+
+    })
+
 
     // a  기본 이동 막기
     $("a").click(function (e) {
