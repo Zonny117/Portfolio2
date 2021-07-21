@@ -15,7 +15,7 @@ $(function () {
         if (winW <= 760 && test) {
 
             $("html").css({
-                height:"unset",
+                height:"auto",
                 overflowX:"hidden"
             })
 
