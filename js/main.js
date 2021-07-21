@@ -6,7 +6,12 @@ $(function () {
 
     $(window).on('load', function () {
 
-        let test = (/Naver/i.test(navigator.userAgent));
+        // let t = navigator.userAgent;
+        // console.log(t);
+
+
+
+        let test = (/naver/i.test(navigator.userAgent));
         console.log(test);
 
         let winW = window.innerWidth;
@@ -15,8 +20,8 @@ $(function () {
         if (winW <= 760 && test) {
 
             $("html").css({
-                height:"auto",
-                overflowX:"hidden"
+                height: "auto",
+                overflowX: "hidden"
             })
 
             $("body").css({
@@ -25,15 +30,17 @@ $(function () {
             })
 
             $(".wrap").css({
-                display: "none"
+                // display: "none",
+                height:"100vh",
+                overflowY:"unset"
             })
 
-            $(".biglogo").css({
-                height: "100vh"
-            })
+            // $(".biglogo").css({
+            //     height: "100vh"
+            // })
         };
 
-    });///////////////////////////////////////////////////
+    }); ///////////////////////////////////////////////////
 
 
     // a  기본 이동 막기
