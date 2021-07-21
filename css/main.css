@@ -324,6 +324,13 @@ footer {
     overflow: hidden;
 }
 
+body .store>li:hover ol {
+    opacity: 1;
+    height: 80px;
+    padding: 15px;
+    overflow: visible;
+}
+
 /* 각 서브메뉴 마우스오버 트랜지션 */
 .store ol li a {
     display: block;
@@ -335,12 +342,6 @@ footer {
     transition: transform .6s ease-in-out .2s;
 }
 
-.store>li:hover ol {
-    opacity: 1;
-    height: 80px;
-    padding: 15px;
-    overflow: visible;
-}
 
 /* 토글용 메뉴 */
 #top2 {

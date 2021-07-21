@@ -44,8 +44,16 @@
     /* 메인로고 */
     .biglogo span {
         font-size: 5vw;
-        right: -42%;
+        right: -80%;
     }
+
+    @keyframes bspan {
+        to {
+            right: -42%;
+            opacity: 1;
+        }
+    }
+
 
     .biglogo img {
         width: 76vw;
@@ -96,10 +104,6 @@
     #top2.on {
         opacity: 1;
         height: 100vh;
-    }
-
-    #product {
-        margin-top: 169px;
     }
 
     #product li:hover a::after,
