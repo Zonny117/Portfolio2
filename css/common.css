@@ -1,0 +1,511 @@
+@charset "utf-8";
+/* 공통 모듈CSS */
+
+
+@import url(reset.css);
+@import url(core.css);
+
+/*///////////////////////////////////////////////// 상단영역 /////////////////////////////////*/
+#topbx {
+    width: 100%;
+    height: 100%;
+}
+
+
+#top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 114px;
+    padding: 30px;
+    box-sizing: border-box;
+    z-index: 999;
+    transition: .6s;
+}
+
+#top.on {
+    height: 0;
+}
+
+/* 상단로고 */
+.mlogo {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    box-sizing: border-box;
+    z-index: 999;
+    transition: .6s;
+}
+
+/* 마우스 휠 이벤트용 클래스 */
+.mlogo.on {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    box-sizing: border-box;
+    z-index: 999;
+    transition: .6s;
+}
+
+.mlogo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 68px;
+}
+
+/* 메인로고 */
+.biglogo {
+    position: relative;
+    /* blogobx 부모자격 */
+    height: 100%;
+}
+
+/* 로고 이미지 및 span 글씨 겉박스 */
+.blogobx {
+    position: absolute;
+    bottom: 0;
+    width: 49vw;
+    /* 박스 비율 유지를 위해 가로크기를 자식요소들이 안을 꽉 채울수 있게 조절 */
+}
+
+.biglogo img {
+    display: block;
+    width: 45vw;
+    opacity: 0;
+    animation: bimg .5s ease-in 2s forwards;
+}
+
+@keyframes bimg {
+    to {
+        opacity: 1;
+    }
+}
+
+.biglogo span {
+    position: absolute;
+    right: -5vw;
+    white-space: nowrap;
+    font-size: 2.08vw;
+    color: #fff;
+    letter-spacing: -2px;
+    opacity: 0;
+    animation: bspan 1s ease-in-out 2.5s forwards;
+}
+
+@keyframes bspan {
+    to {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+/* 네비게이션 */
+.gnb {
+    position: absolute;
+    left: 180px;
+    bottom: 9px;
+    display: flex;
+}
+
+.gnb>li {
+    padding-left: 21px;
+    height: 100%;
+    text-align: center;
+}
+
+.gnb>li>a {
+    font-weight: bold;
+    line-height: 74px;
+}
+
+/* 스토어 */
+.store {
+    position: absolute;
+    width: 100px;
+    height: 23px;
+    top: 68px;
+    right: 200px;
+    transform: translateY(-50%);
+    font-weight: bold;
+    text-align: center;
+    transition: .6s;
+}
+
+.store.on {
+    top: 0px;
+}
+
+.store>li {
+    display: block;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    padding-right: 35px;
+}
+
+/* 스토어 화살표 아이콘 가상요소 */
+.storeTit::after {
+    content: url(../images/icon-arrow.svg);
+    position: absolute;
+    display: inline-block;
+    margin-left: 15px;
+    top: 2px;
+    transform: rotate(270deg);
+    height: 20px;
+    transition: .4s ease-in-out;
+}
+
+.store>li:hover .storeTit::after {
+    transform: rotate(90deg);
+}
+
+.store ol {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 200px;
+    box-sizing: border-box;
+    background-color: #000;
+    text-align: left;
+    font-size: 12px;
+    line-height: 2;
+    border-radius: 5px;
+
+
+
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity .6s ease-in-out;
+}
+
+/* 스토어 서브메뉴 박스 상단 삼각형 */
+.store ol::before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 31px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #000;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.store ol li {
+    overflow: hidden;
+}
+
+/* 각 서브메뉴 마우스오버 트랜지션 */
+.store ol li a {
+    display: block;
+    transform: translateY(-100%);
+}
+
+.store>li:hover ol li a {
+    transform: translateY(0%);
+    transition: transform .6s ease-in-out .2s;
+}
+
+.store>li:hover ol {
+    opacity: 1;
+    height: 80px;
+    padding: 15px;
+    overflow: visible;
+}
+
+/* 토글용 메뉴 */
+#top2 {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    box-sizing: border-box;
+    z-index: 999;
+    background-color: #000;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+    opacity: 0;
+    transition: .6s ease-in-out;
+}
+
+#top2.on {
+    opacity: 1;
+    height: 450px;
+}
+
+#product,
+#about {
+    box-sizing: border-box;
+    margin-left: 15%;
+    margin-top: 100px;
+}
+
+#product li,
+#about li {
+    overflow: hidden;
+}
+
+#product a,
+#about a {
+    display: block;
+    font-size: 30px;
+    transform: translateY(100%);
+    transition: all .6s ease-in-out;
+}
+
+/* #top2에 클래스 on 들어가면 서브메뉴 원위치*/
+#top2.on #product a,
+#top2.on #about a {
+    transform: translateY(0%);
+}
+
+/* 마우스오버용 밑줄 가상요소 */
+#product a::after,
+#about a::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid #fff;
+    width: 0;
+    transition: all .3s ease-in-out;
+}
+
+#product li:hover a::after,
+#about li:hover a::after {
+    width: 100%;
+    border-bottom: 3px solid #fff;
+}
+
+#product li+li,
+#about li+li {
+    margin-top: 10px;
+}
+
+.ptit,
+.atit {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+
+/* 햄버거 버튼 */
+.ham {
+    position: fixed;
+    top: 65px;
+    right: 35px;
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 9999;
+    transform: translateY(-50%);
+    transition: .6s;
+}
+
+.ham span {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 3px;
+    /* 햄버거로 돌아갈때 트랜스폼 -> top -> 투명도 순으로 트랜지션 */
+    transition: top .3s .5s, transform .3s, opacity .3s .6s;
+}
+
+/* 햄버거 버튼 각 span 포지션 설정 top으로 통일 */
+.ham span:first-child {
+    top: 0;
+}
+
+.ham span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.ham span:last-child {
+    top: 100%;
+}
+
+/* 햄버거버튼 클래스 on 설정 */
+.ham.on span {
+    margin: 0;
+    /* 엑스표시 될때 top이 먼저 트랜지션 */
+    transition: top .3s, transform .3s .5s, opacity .3s;
+}
+
+/* 햄버거버튼 클래스 on 각 span 설정*/
+.ham.on span:first-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(40deg);
+}
+
+.ham.on span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham.on span:last-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-40deg);
+}
+
+/* /////////////////////////////////////////////////////푸터 영역////////////////////////////////////////////////////////// */
+footer {
+    width: 100%;
+    height: auto;
+    z-index: 99;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 652px;
+}
+
+footer span {
+    display: block;
+}
+
+
+/* 회사 주소 */
+address {
+    font-style: normal;
+    word-spacing: -1px;
+}
+
+address span+span {
+    margin-top: 10px;
+}
+
+
+/* 연락 */
+.emailbx {
+    margin-top: 35px;
+}
+
+.emailbx span {
+    margin-top: 10px;
+}
+
+.copy {
+    letter-spacing: -0.7px;
+}
+
+/* 패밀리 사이트 */
+.familybx {
+    position: relative;
+    margin-top: 60px;
+    font-size: 12px;
+}
+
+.family>li {
+    width: 100px;
+}
+
+/* li 마우스오버용 가상영역 */
+.family>li:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    width: 100px;
+    height: 20px;
+}
+
+/* 화살표 아이콘 */
+.family span {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 8px;
+    height: 8px;
+    background: url(../images/icon-arrow-white.svg) no-repeat center/100%;
+    transform: rotate(0deg);
+    transition: transform .3s ease-in-out;
+}
+
+.family>li:hover span {
+    transform: rotate(-180deg);
+}
+
+/* 패밀리사이트 서브메뉴 */
+.family ol {
+    position: absolute;
+    top: -145px;
+    background-color: #fff;
+    width: 100px;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+
+    opacity: 0;
+    height: 0px;
+    padding: 0px;
+    overflow: hidden;
+    transition: opacity .6s ease-in-out;
+}
+
+/* 역삼각형 가상요소 */
+.family ol::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -10px;
+    border-top: 20px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+/* 각 서브메뉴 마우스 오버 트랜지션 */
+.family ol li {
+    overflow: hidden;
+}
+
+.family ol li a {
+    transform: translateY(-100%);
+}
+
+.family>li:hover ol li a {
+    transform: translateY(0%);
+    transition: transform .6s ease-in-out;
+}
+
+.family ol li+li {
+    margin-top: 4px;
+}
+
+.family ol li a {
+    display: block;
+    color: #000;
+}
+
+.family>li:hover ol {
+    padding: 15px;
+    height: 130px;
+    opacity: 1;
+    overflow: visible;
+    /* 삼각형보이게 */
+}
+
+/* sns */
+.snsbx {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sns {
+    display: flex;
+}
+
+.sns li+li {
+    margin-left: 20px;
+}
+
+.sns img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}

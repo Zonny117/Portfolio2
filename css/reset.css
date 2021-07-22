@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* 리셋 CSS */
+
+body,
+html,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* 서브 페이지 각 컨텐츠 디자인 리셋 */
+
+body .cbx{
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+    transform: unset;
+    box-sizing: border-box;
+}
+
+#cbx {
+    padding: 0px 10px;
+}
+
+#cc {
+    position: relative;
+    width: auto;
+    right: unset;
+    left: unset;
+    transform: unset;
+}

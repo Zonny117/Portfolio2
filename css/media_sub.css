@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* 미디어 쿼리 서브 공통css */
+
+@media only screen and (max-width:760px) {
+
+    /* 공통 박스 가로크기 */
+    .wid {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    /* 각 컨텐츠 패딩 리셋 */
+    body #cbx {
+        padding: 30px 0px;
+    }
+
+    /* 각 컨텐츠 글자 크기 수정 */
+    #cc h2 {
+        font-size: 6vw;
+
+    }
+
+    /* /////////////////////////////상단 영역 ////////////////////*/
+
+    /* 네비게이션 */
+    .gnb {
+        display: none;
+    }
+
+    /* 상단로고 */
+    .mlogo {
+        top: 13px;
+        left: 16px;
+    }
+
+    .mlogo.on {
+        top: 13px;
+        left: 16px;
+    }
+
+    .mlogo img {
+        line-height: 30px;
+    }
+
+
+    .biglogo img {
+        width: 76vw;
+    }
+
+    /* 상단 상점 메뉴 */
+    .store {
+        top: 48px;
+        right: 82px;
+    }
+
+    .storeTit {
+        font-size: 12px;
+    }
+
+    .storeTit::after {
+        top: 4px;
+        margin-left: 5px;
+        transform: rotate(270deg) scale(.7);
+
+    }
+
+    .store>li:hover .storeTit::after {
+        transform: rotate(90deg) scale(.7);
+    }
+
+    .store ol {
+        width: 153px;
+    }
+
+    /* 햄버거 버튼 */
+    .ham {
+        top: 48px;
+        width: 30px;
+        right: 19px;
+        height: 13px;
+    }
+
+    .ham span:nth-child(2) {
+        transform: translateY(-17%)
+    }
+
+
+    #top2 {
+        display: block;
+    }
+
+    #top2.on {
+        opacity: 1;
+        height: 100vh;
+    }
+
+    #product ul {
+        margin-top: 100px;
+    }
+
+    #product,
+    #about {
+        margin-top: 7%;
+    }
+
+    #product li:hover a::after,
+    #about li:hover a::after {
+        width: 30%;
+        border-bottom: 3px solid #fff;
+    }
+
+    /* 푸터 영역 */
+    footer {
+        margin-top: 632px;
+    }
+
+    .footbx {
+        padding: 40px 0px;
+    }
+
+    address {
+        font-size: 11px;
+        line-height: 6px;
+    }
+
+    .emailbx {
+        font-size: 11px;
+        line-height: 6px;
+    }
+
+    .family>li>a {
+        font-size: 10px;
+    }
+
+    .sns img {
+        width: 26px;
+        height: 26px;
+    }
+
+}
+
+
+/* 가로 580px에서 스토리 십자 버튼 크기 줄이기 */
+@media only screen and (max-width:580px) {
+    .nstory li:nth-child(3) a::after {
+        transform: scale(0.6);
+    }
+
+    .makeup li:nth-child(3) a:hover::after {
+        transform: scale(0.6);
+    }
+
+    .fgtest li:nth-child(5) a::after {
+        transform: scale(0.6);
+    }
+
+}
+
+/* 갤럭시 폴드 */
+@media only screen and (max-width:300px) {
+
+    .store {
+        right: 63px;
+    }
+
+}

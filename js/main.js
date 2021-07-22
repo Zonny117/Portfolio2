@@ -4,36 +4,42 @@
 ///////////////JQB
 $(function () {
 
+    // 스크롤 플러그인 호출
+    $(window).easeScroll();
+
     $(window).on('load', function () {
 
-        // let t = navigator.userAgent;
-        // console.log(t);
-
+        // 네이버 모바일 앱 브라우저에서 url바와 실제 vh 계산이 일치하지 않아
+        // 기존 세팅을 네이버 앱 브라우저에서만 출력시킴.
         let test = (/naver/i.test(navigator.userAgent));
-        console.log(test);
+        // console.log(test);
 
         let winW = window.innerWidth;
-        console.log(winW);
+        // console.log(winW);
 
+        // 뷰포트 가로크기가 760이하이고 현재 사용 브라우저가 naver라면 아래 코드 실행
         if (winW <= 760 && test) {
 
             $("html").css({
                 height: "auto",
                 overflowX: "hidden",
                 overflowY: "auto"
-            })
+                // overflow: "unset"이 아닌 기존 css에 따로 잡아준걸
+                // 하나하나 다 풀어야된다.
+            });
 
             $("body").css({
                 height: "100%",
                 overflowX: "hidden",
                 overflowY: "auto"
-            })
+            });
 
             $(".biglogo").css({
                 height: "100vh"
-            })
+            });
 
-            $("#topbx").unwrap()
+            // #topbx의 부모요소 모바일 브라우저 vh 이슈를 처리하기위해 세팅한 .wrap박스를 제거한다.
+            $("#topbx").unwrap();
 
         };
 
@@ -41,8 +47,11 @@ $(function () {
 
 
     // a  기본 이동 막기
-    $("a").click(function (e) {
+    $(".gnb a").click(function (e) {
+
         e.preventDefault();
+
+
     }); ///////////////////
 
 
@@ -86,7 +95,7 @@ $(function () {
 
         let deltaY = tS - tE;
         // console.log("터치 위치값: " + deltaY);
-        // console.log(deltaY)
+        console.log(deltaY)
 
         // 상단메뉴 터치시 기준값이 0이면 미세한 터치차이로 인해 상단메뉴가 사라질수 있기 때문에
         // 기준값을 살짝 늘려줌, 터치 윗방향 스와이프만 설정.
