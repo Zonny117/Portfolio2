@@ -2,15 +2,11 @@
 /* 미디어쿼리 */
 
 @media only screen and (max-width:760px) {
-    *{
-        -webkit-tap-highlight-color: transparent;
-    }
     
     body {
         background: url(../images/bgm.jpg) no-repeat fixed center/cover;
     }
 
-    
     /* 공통 박스 가로크기 */
     .wid {
         width: 90%;
@@ -112,7 +108,7 @@
     }
 
     #product ul {
-        margin-top: 94px;
+        margin-top: 100px;
     }
 
     #product,
