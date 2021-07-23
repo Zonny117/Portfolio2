@@ -66,11 +66,8 @@ $(function () {
         $(".store").toggleClass("on");
 
         $(".mlogo").toggleClass("on");
+        
     }); /////////////////////////////////
-
-
-
-
     /////////////////// //////////모바일 터치 상위 메뉴 이벤트////////////////////////////////////
 
     $(document).on('touchstart touchend', function (e) {
@@ -110,7 +107,7 @@ $(function () {
 
             $(".gnb").css({
                 top: "-130px",
-                bottom:"unset"
+                bottom: "unset"
             })
 
             $(".store").css({
@@ -147,7 +144,7 @@ $(function () {
 
             $(".gnb").css({
                 top: "14px",
-                bottom:"unset"
+                bottom: "unset"
             })
 
             $(".store").css({
@@ -201,8 +198,8 @@ $(function () {
             })
 
             $(".gnb").css({
-                top:"unset",
-                bottom:"9px"
+                top: "unset",
+                bottom: "9px"
             })
 
             $(".store").css({
@@ -237,8 +234,8 @@ $(function () {
             })
 
             $(".gnb").css({
-                top:"unset",
-                bottom:"9px"
+                top: "unset",
+                bottom: "9px"
             })
 
             $(".store").css({

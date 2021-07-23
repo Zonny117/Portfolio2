@@ -3,6 +3,28 @@
 
 @media only screen and (max-width:760px) {
 
+    /* about 서브 페이지 컨텐츠 세팅 */
+    body .cbx{
+        width: 100%;
+        padding: 0px;
+        margin: 0;
+        transform: unset;
+        box-sizing: border-box;
+    }
+    
+    #cbx {
+        padding: 0px 10px;
+    }
+    
+    #cc {
+        position: relative;
+        width: auto;
+        right: unset;
+        left: unset;
+        transform: unset;
+    }
+    
+
     /* 공통 박스 가로크기 */
     .wid {
         width: 90%;
@@ -26,6 +48,32 @@
     }
 
 
+    /* 브랜드 사이트 */
+    body #mtxt span{
+        font-size: 2.5vw;
+    }
+
+    body .wh{
+        width: 40vw;
+        top: 38%;
+    }
+
+    body .whtxt{
+        margin-top: unset;
+        font-size: 2.5vw;
+    }
+
+    body .whtxt2{
+        font-size: 2.5vw;
+    }
+
+    body .whm{
+        margin-top: 30px;
+    }
+
+    body #null{
+        background: url(../images/brand/bg.jpg) no-repeat center/100%;
+    }
 
     /* /////////////////////////////상단 영역 ////////////////////*/
 
