@@ -218,20 +218,35 @@ footer {
     text-align: right;
     letter-spacing: -0.8px;
     font-size: 1vw;
+    opacity: 0;
 }
 
 .whtxt2 {
     display: block;
     margin-top: 50px;
     font-size: 1vw;
+    opacity: 0;
 
 }
+
+.thatbx{
+    position: relative;
+    width: 100%;
+}
+
+.thatbx::before{
+    content: '';
+    display: block;
+    padding-top: 38%;
+}
+
 
 .wh {
     position: absolute;
     width: 31vw;
     top: 500px;
     right: 0;
+    opacity: 0;
 }
 
 .wh1 a>span{
@@ -245,6 +260,7 @@ a>span{
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     font-size: 1vw;
+    opacity: 0;
 }
 
 
@@ -267,6 +283,7 @@ a>span{
     border-radius: 10px;
     font-family: 'Public Sans', sans-serif;
     background: url(../images/brand/muse-1.jpg) no-repeat top/100%;
+    opacity: 0;
 }
 
 /* 비율유지 가상 박스 */
@@ -294,6 +311,7 @@ a>span{
     background: linear-gradient(180deg, #954e4e 0%, #d5c2ba 100%);
     border-radius: 10px;
     background: url(../images/brand/muse-2.jpg) no-repeat top/100%;
+    opacity: 0;
 }
 
 .wh2 a::before {
@@ -320,6 +338,7 @@ a>span{
     border-radius: 10px;
     font-family: 'Public Sans', sans-serif;
     background: url(../images/brand/muse-3.jpg) no-repeat top/100%;
+    opacity: 0;
 }
 
 .wh3 a::before {

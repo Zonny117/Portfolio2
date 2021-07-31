@@ -29,6 +29,7 @@ body{
     top: 170px;
     width: 60vw;
     border-radius: 10px;
+    transform: scale(.8);
 }
 
 /* 천우희 이미지 텍스트 */
@@ -37,6 +38,7 @@ body{
     bottom: -14vh;
     width: 50vw;
     left: 11vw;
+    opacity: 0;
     background: url(../images/typo-muse-2.svg) no-repeat bottom/100%;
 }
 
@@ -47,6 +49,7 @@ body{
     text-align: right;
     margin-top: 202px;
     padding-right: 10vw;
+    opacity: 0;
 }
 
 .nstory li:nth-child(3) {
@@ -80,6 +83,7 @@ body{
     top: 170px;
     width: 58vw;
     border-radius: 10px;
+    transform: scale(.8);
 }
 
 /* 김혜준 이미지 텍스트 */
@@ -89,6 +93,7 @@ body{
     width: 50vw;
     left: 17vw;
     background: url(../images/typo-lookbook-2.svg) no-repeat bottom/100%;
+    opacity: 0;
 }
 
 /* 메이크업 */
@@ -96,6 +101,7 @@ body{
     color: #fff;
     margin-top: 202px;
     padding-left: 10vw;
+    opacity: 0;
 }
 
 .makeup li:nth-child(3) {
@@ -129,6 +135,7 @@ body{
     top: 170px;
     width: 60vw;
     border-radius: 10px;
+    transform: scale(.8);
 }
 
 /* 플라워가든 이미지 텍스트 */
@@ -138,6 +145,7 @@ body{
     width: 48vw;
     left: 11vw;
     background: url(../images/typo-flower-2.svg) no-repeat bottom/100%;
+    opacity: 0;
 }
 
 
@@ -147,6 +155,7 @@ body{
     text-align: right;
     margin-top: 202px;
     padding-right: 10vw;
+    opacity: 0;
 }
 
 .fgtest li:nth-child(5) {
@@ -191,12 +200,21 @@ body{
     color: #fff;
     text-align: right;
     letter-spacing: -0.8px;
+    opacity: 0;
 }
 
 .face {
     width: 24vw;
     margin-top: 67px;
     padding-left: 10vw;
+    opacity: 0;
+}
+
+
+/* 스크롤 액션 공통클래스 */
+.Ani{
+    opacity: 0;
+    top: 400px;
 }
 
 
@@ -412,6 +430,7 @@ body{
 
 .fc4 a {
     position: absolute;
+    top: 110%;
     width: 31.2vw;
     left: 5vw;
     box-sizing: border-box;
@@ -421,6 +440,7 @@ body{
     border-radius: 10px;
     font-family: 'Public Sans', sans-serif;
     transform: translateY(-115%);
+    opacity: 0;
 }
 
 .fc4 a::before {
@@ -491,6 +511,7 @@ body{
     padding-left: 10vw;
     text-align: left;
     letter-spacing: -0.8px;
+    opacity: 0;
 }
 
 .lip {
@@ -499,6 +520,7 @@ body{
     margin-top: 67px;
     margin-left: auto;
     padding-right: 10vw;
+    opacity: 0;
 }
 
 
@@ -718,6 +740,7 @@ body{
 
 .lip4 a {
     position: absolute;
+    top: 110%;
     width: 31.2vw;
     right: 10vw;
     box-sizing: border-box;
@@ -727,6 +750,7 @@ body{
     border-radius: 10px;
     font-family: 'Public Sans', sans-serif;
     transform: translateY(-115%);
+    opacity: 0;
 }
 
 .lip4 a::before {
@@ -792,6 +816,7 @@ body{
     padding-right: 10vw;
     text-align: right;
     letter-spacing: -0.8px;
+    opacity: 0;
 }
 
 .eye {
@@ -800,6 +825,7 @@ body{
     margin-top: 67px;
     margin-right: auto;
     padding-left: 10vw;
+    opacity: 0;
 }
 
 
@@ -1013,6 +1039,7 @@ body{
 
 .eye4 a {
     position: absolute;
+    top: 110%;
     width: 31.2vw;
     left: 5vw;
     box-sizing: border-box;
@@ -1022,6 +1049,7 @@ body{
     border-radius: 10px;
     font-family: 'Public Sans', sans-serif;
     transform: translateY(-115%);
+    opacity: 0;
 }
 
 .eye4 a::before {
@@ -1088,6 +1116,7 @@ body{
     padding-left: 10vw;
     text-align: left;
     letter-spacing: -0.8px;
+    opacity: 0;
 }
 
 .skincare {
@@ -1096,6 +1125,7 @@ body{
     margin-top: 67px;
     margin-left: auto;
     padding-right: 10vw;
+    opacity: 0;
 }
 
 
@@ -1298,6 +1328,7 @@ body{
 /* skin 컨텐츠 4 - 프로덕트 */
 .skin4 a {
     position: absolute;
+    top: 110%;
     width: 31.2vw;
     right: 10vw;
     box-sizing: border-box;
@@ -1307,6 +1338,7 @@ body{
     border-radius: 10px;
     font-family: 'Public Sans', sans-serif;
     transform: translateY(-115%);
+    opacity: 0;
 }
 
 .skin4 a::before {

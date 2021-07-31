@@ -160,4 +160,67 @@ $(function () {
     $(".contbx2").html(ct2);
     $(".contbx3").html(ct3);
 
+    $("html, body").on('mousewheel DOMMouseScroll', function () {
+
+        let fcTop = $(".fc1>a").offset().top;
+
+        // console.log(fcTop)
+
+        let first = $(".fc1").first().find("a");
+        let second = $(".fc1").eq(1).find("a");
+        let last = $(".fc1").last().find("a");
+
+        if (fcTop < 1000) {
+
+            first.css({
+                top: "0",
+                opacity: "1",
+                transition: "1s ease-Out"
+            })
+            second.css({
+                top: "0",
+                opacity: "1",
+                transition: "1s ease-Out .5s"
+            })
+            last.css({
+                top: "0",
+                opacity: "1",
+                transition: "1s ease-Out 1s"
+            })
+
+        }
+
+    });
+
+    $("html, body").on('touchstart', function () {
+
+        let fcTop = $(".fc1>a").offset().top;
+
+
+        let first = $(".fc1").first().find("a");
+        let second = $(".fc1").eq(1).find("a");
+        let last = $(".fc1").last().find("a");
+
+        if (fcTop < 500) {
+
+            first.css({
+                top: "0",
+                opacity: "1",
+                transition: "top 1s ease-Out, opacity 1s ease-Out"
+            })
+            second.css({
+                top: "0",
+                opacity: "1",
+                transition: "top 1s ease-Out .5s, opacity 1s ease-Out .5s"
+            })
+            last.css({
+                top: "0",
+                opacity: "1",
+                transition: "top 1s ease-Out 1s, opacity 1s ease-Out 1s"
+            })
+
+        }
+
+    });
+
 }); //////////////////////////////////////////////////////////////////////////

@@ -39,6 +39,7 @@
 
 .fc1 a {
     position: relative;
+    top: 50%;
     right: -7.3vw;
     width: 31.2vw;
     box-sizing: border-box;
@@ -47,6 +48,7 @@
     color: #000;
     border-radius: 10px;
     font-family: 'Public Sans', sans-serif;
+    opacity: 0;
 }
 
 
