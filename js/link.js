@@ -15,7 +15,7 @@ $(function(){
         switch(txt){///////////////
             case "Brand Story" : url="brand.html"; break;
             case "Lookbook" : url="look.html"; break;
-            case "Contact" : url="contact.html"; break;
+            case "Login" : url="login.html"; break;
             default : url="sub.html?won=" + txt;
         }////////////////////////
 

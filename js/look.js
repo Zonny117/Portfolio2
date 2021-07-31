@@ -230,7 +230,7 @@ $(function () {
 
     }); ///////////////
 
-    $("html,body").on('touchstart touchend', function () {
+    $("html,body").on('touchstart', function () {
 
         //배경 변경
         let topbx = $("#topbx").position().top;
@@ -365,7 +365,7 @@ $(function () {
 
             $(".recomand").first().find("span").css({
                 opacity: "1",
-                transition: "opacity 1s ease-Out 1s"
+                transition: "opacity 1s ease-Out"
             })
         }
 
@@ -386,7 +386,7 @@ $(function () {
 
             $(".recomand").eq(1).find("span").css({
                 opacity: "1",
-                transition: "opacity 1s ease-Out 1s"
+                transition: "opacity 1s ease-Out"
             })
 
         }
@@ -408,7 +408,7 @@ $(function () {
 
             $(".recomand").last().find("span").css({
                 opacity: "1",
-                transition: "opacity 1s ease-Out 1s"
+                transition: "opacity 1s ease-Out"
             })
 
         }

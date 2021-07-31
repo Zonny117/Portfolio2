@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neker | 네케르</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/member.css">
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.easeScroll.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/link.js"></script>
+    <script src="js/login.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="topbx">
+            <!-- 상단메뉴 -->
+            <div id="top">
+                <!-- 네비게이션 -->
+                <ul class="gnb">
+                    <li>
+                        <a href="#">Face</a>
+                    </li>
+                    <li>
+                        <a href="#">Lip</a>
+                    </li>
+                    <li>
+                        <a href="#">Eye</a>
+                    </li>
+                    <li>
+                        <a href="#">Skincare</a>
+                    </li>
+                </ul>
+                <!-- 스토어 -->
+                <ul class="store">
+                    <li>
+                        <a href="#" class="storeTit">Neker Store</a>
+                        <ol>
+                            <li>
+                                <a href="#">LU42 온라인스토어</a>
+                            </li>
+                            <li>
+                                <a href="#">네이버 스마트스토어</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+                <!-- 토글용 상단메뉴 -->
+                <div id="top2">
+                    <div id="product">
+                        <ul class="Product">
+                            <li class="ptit">Products</li>
+                            <li>
+                                <a href="#">Face</a>
+                            </li>
+                            <li>
+                                <a href="#">Lip</a>
+                            </li>
+                            <li>
+                                <a href="#">Eye</a>
+                            </li>
+                            <li>
+                                <a href="#">Skincare</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="about">
+                        <ul class="about">
+                            <li class="atit">About Us</li>
+                            <li>
+                                <a href="#">Brand Story</a>
+                            </li>
+                            <li>
+                                <a href="#">Lookbook</a>
+                            </li>
+                            <li>
+                                <a href="#">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 로고 -->
+                <div class="mlogo">
+                    <h1>
+                        <a href="index.html">
+                            <img src="images/logo-white.svg" alt="로고">
+                        </a>
+                    </h1>
+                </div>
+                <!-- 햄버거 -->
+                <div class="ham">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!-- 메인 영역 -->
+            <div class="membx wid">
+                <div class="member">
+                    <h2 class="memtxt">회원가입</h2>
+                    <form action="member.php" method="POST">
+                        <ul>
+                            <li>
+                                <label for="mid">아이디</label>
+                                <input type="text" id="mid" name="mid" maxlength="25" placeholder="아이디를 입력하세요.">
+                                <span class="adv">영문자로 시작하는 6~20 사이의 영문자/숫자 조합</span>
+                                <span class="msg"></span>
+                            </li>
+                            <li>
+                                <label for="mpw">비밀번호</label>
+                                <input type="password" id="mpw" name="mpw" maxlength="20"
+                                    placeholder="비밀번호를 입력하세요.">
+                                <span class="adv">특수문자,문자,숫자포함 5~15자리</span>
+                                <span class="msg"></span>
+                            </li>
+                            <li>
+                                <label for="mpw2">비밀번호확인</label>
+                                <input type="password" id="mpw2" name="mpw2" maxlength="20" placeholder="비밀번호를 확인하세요.">
+                                <span class="msg"></span>
+                            </li>
+                            <li>
+                                <label for="mnm">이름</label>
+                                <input type="text" id="mnm" name="mnm" maxlength="20" placeholder="이름을 입력하세요.">
+                                <span class="msg"></span>
+                            </li>
+                            <li>
+                                <label for="gen1">성별</label>
+                                남성
+                                <input type="radio" name="gen" id="gen1" checked>
+                                여성
+                                <input type="radio" name="gen" id="gen2">
+                            </li>
+                            <li>
+                                <label for="email1">이메일</label>
+                                <input type="text" id="email1" name="email1" placeholder="이메일 주소">
+                                <b>@</b>
+                                <select name="seleml" id="seleml">
+                                    <option value="init">이메일선택</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="daum.net">daum.net</option>
+                                    <option value="hotmail.com">hotmail.com</option>
+                                    <option value="hanmail.net">hanmail.net</option>
+                                    <option value="gmail.com">gmail.com</option>
+                                    <option value="free">직접입력</option>
+                                </select>
+                                <span class="msg"></span>
+                            </li>
+                            <li>
+                                <label for="email2"></label>
+                                <input type="text" id="email2" name="email2" placeholder="이메일뒷주소">
+                            </li>
+                            <li>
+                                <input type="submit" value="가입하기" id="btnj">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
