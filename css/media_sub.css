@@ -284,9 +284,16 @@
     }
 
     /* //////////////////////////////////////////////// 로그인 사이트/////////////////////////////// */
+    .logbd::before{
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+    }
+
     .login {
         width: 100%;
         height: auto;
+        background-color: unset;
+        border: none;
     }
 
     .idlab,
