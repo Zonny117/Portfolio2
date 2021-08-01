@@ -283,47 +283,7 @@
         text-align: left;
     }
 
-    /* //////////////////////////////////////////////// 로그인 사이트/////////////////////////////// */
-    .logbd::before{
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 100%;
-    }
 
-    .login {
-        width: 100%;
-        height: auto;
-        background-color: unset;
-        border: none;
-    }
-
-    .idlab,
-    .pwlab,
-    .check,
-    .signUp {
-        margin-left: unset;
-    }
-
-    .idlab,
-    .pwlab {
-        margin: 0 auto;
-        width: 200px;
-    }
-
-    .checkbx>span {
-        display: block;
-        margin: 0 auto;
-        width: 200px;
-    }
-
-    .submitbx {
-        margin: 0 auto;
-        width: 200px;
-    }
-
-    .signUp,
-    .signIn {
-        width: 95px;
-    }
 
     /* /////////////////////////////상단 영역 ////////////////////*/
 
@@ -469,5 +429,101 @@
     .store {
         right: 63px;
     }
+
+}
+
+
+@media only screen and (max-width:850px) {
+
+    /* //////////////////////////////////////////////// 로그인 사이트/////////////////////////////// */
+    .logbd::before {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+    }
+
+    .login {
+        width: 100%;
+        height: auto;
+        background-color: unset;
+        border: none;
+    }
+
+    .idlab,
+    .pwlab,
+    .check,
+    .signUp {
+        margin-left: unset;
+    }
+
+    .idlab,
+    .pwlab {
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    .checkbx>span {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    .submitbx {
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    .signUp,
+    .signIn {
+        width: 95px;
+    }
+
+    /* ///////////////////////////////////////////////회원가입/////////////////////////////////// */
+    .member {
+        background-color: unset;
+        border: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .memtxt {
+        margin-top: 35%;
+        margin-bottom: 10%;
+    }
+
+
+    .member input[type=text],
+    .member input[type=password] {
+        width: 143px;
+    }
+
+    .member ul {
+        width: 100%;
+    }
+
+    .member li {
+        margin: 0 auto;
+    }
+
+    .member li:nth-child(6) {
+        margin-top: 10px;
+    }
+
+    body .email1 {
+        display: block;
+    }
+
+    body #email2 {
+        margin-left: 74px;
+        float: none;
+    }
+
+
+    #btnj {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+
+
 
 }
