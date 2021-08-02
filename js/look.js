@@ -11,35 +11,34 @@ $(function () {
         prot = 1;
         setTimeout(function () {
             prot = 0;
-        }, 600);
+        }, 1000);
 
+        // 배경 변경
+        let topbx = $("#topbx").offset().top;
 
-        //배경 변경
-        let topbx = $("#topbx").position().top;
-
-        let chic = $(".lookbx").position().top;
+        let chic = $(".lookbx").offset().top;
         // console.log("첫번째" + chic);
 
-        let dream = $(".lookbx2").position().top;
+        let dream = $(".lookbx2").offset().top;
         // console.log("두번째" + dream);
 
-        let pure = $(".lookbx3").position().top;
+        let pure = $(".lookbx3").offset().top;
         // console.log("세번째" + pure);
 
         if (topbx <= 0) {
-            $("body").removeClass("chic dream pure")
+            $("body").removeClass()
         }
 
         if (chic <= 0) {
-            $("body").removeClass("dream pure").addClass("chic")
+            $("body").removeClass().addClass("chic")
         }
 
         if (dream <= 0) {
-            $("body").removeClass("chic pure").addClass("dream")
+            $("body").removeClass().addClass("dream")
         }
 
         if (pure <= 0) {
-            $("body").removeClass("chic dream").addClass("pure")
+            $("body").removeClass().addClass("pure")
         }
 
 
@@ -230,34 +229,45 @@ $(function () {
 
     }); ///////////////
 
-    $("html,body").on('touchstart', function () {
+    $("html,body").on('touchstart touchend', function () {
+
+
+        let prot = 0;
+
+        if (prot) return;
+
+        prot = 1;
+        setTimeout(function () {
+            prot = 0;
+        }, 1000);
+
 
         //배경 변경
-        let topbx = $("#topbx").position().top;
+        let topbx = $("#topbx").offset().top;
 
-        let chic = $(".lookbx").position().top;
+        let chic = $(".lookbx").offset().top;
         // console.log("첫번째" + chic);
 
-        let dream = $(".lookbx2").position().top;
+        let dream = $(".lookbx2").offset().top;
         // console.log("두번째" + dream);
 
-        let pure = $(".lookbx3").position().top;
+        let pure = $(".lookbx3").offset().top;
         // console.log("세번째" + pure);
 
         if (topbx <= 0) {
-            $("body").removeClass("chic dream pure")
+            $("body").removeClass().addClass("bgm")
         }
 
         if (chic <= 0) {
-            $("body").removeClass("dream pure").addClass("chic")
+            $("body").removeClass().addClass("chicm")
         }
 
         if (dream <= 0) {
-            $("body").removeClass("chic pure").addClass("dream")
+            $("body").removeClass().addClass("dreamm")
         }
 
         if (pure <= 0) {
-            $("body").removeClass("chic dream").addClass("pure")
+            $("body").removeClass().addClass("purem")
         }
 
 

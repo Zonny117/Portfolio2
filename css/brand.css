@@ -88,11 +88,11 @@ section {
 }
 
 /* 임시 테두리 */
-main,
+/* main,
 section,
 footer {
     outline: 2px dashed #ccc;
-}
+} */
 
 /* 모바일 vh 이슈를 처리하기 위한 모든 컨텐츠의 부모박스 */
 .wrap {
@@ -106,7 +106,7 @@ footer {
 .wid {
     width: calc(100% - 16.33%);
     margin: 0 auto;
-    outline: 2px dotted blue;
+    /* outline: 2px dotted blue; */
 }
 
 /* 가상 속박스 공통 클래스*/
