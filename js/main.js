@@ -92,7 +92,7 @@ $(function () {
 
         let deltaY = tS - tE;
         // console.log("터치 위치값: " + deltaY);
-        console.log(deltaY)
+        // console.log(deltaY)
 
         // 상단메뉴 터치시 기준값이 0이면 미세한 터치차이로 인해 상단메뉴가 사라질수 있기 때문에
         // 기준값을 살짝 늘려줌, 터치 윗방향 스와이프만 설정.
