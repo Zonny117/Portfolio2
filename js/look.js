@@ -4,15 +4,6 @@ $(function () {
 
     $(window).on('mousewheel DOMMouseScroll', function () {
 
-        let prot = 0;
-
-        if (prot) return;
-
-        prot = 1;
-        setTimeout(function () {
-            prot = 0;
-        }, 1000);
-
         // 배경 변경
         let topbx = $("#topbx").offset().top;
 
@@ -29,15 +20,15 @@ $(function () {
             $("body").removeClass()
         }
 
-        if (chic <= 0) {
+        if (chic <= 200) {
             $("body").removeClass().addClass("chic")
         }
 
-        if (dream <= 0) {
+        if (dream <= 200) {
             $("body").removeClass().addClass("dream")
         }
 
-        if (pure <= 0) {
+        if (pure <= 200) {
             $("body").removeClass().addClass("pure")
         }
 
@@ -231,17 +222,6 @@ $(function () {
 
     $("html,body").on('touchstart touchend', function () {
 
-
-        let prot = 0;
-
-        if (prot) return;
-
-        prot = 1;
-        setTimeout(function () {
-            prot = 0;
-        }, 1000);
-
-
         //배경 변경
         let topbx = $("#topbx").offset().top;
 
@@ -255,18 +235,18 @@ $(function () {
         // console.log("세번째" + pure);
 
         if (topbx <= 0) {
-            $("body").removeClass().addClass("bgm")
+            $("body").removeClass()
         }
 
-        if (chic <= 0) {
+        if (chic <= 200) {
             $("body").removeClass().addClass("chicm")
         }
 
-        if (dream <= 0) {
+        if (dream <= 200) {
             $("body").removeClass().addClass("dreamm")
         }
 
-        if (pure <= 0) {
+        if (pure <= 200) {
             $("body").removeClass().addClass("purem")
         }
 

@@ -6,35 +6,36 @@
 
 body {
     background: url(../images/lookbook/lookbook-background-1.jpg) no-repeat fixed center/cover;
-    transition: 1s ease-in-out;
+    transition: 1.5s;
 }
 
-
-body.bgm{
-    background: url(../images/lookbook/lookbook-background-1-m.jpg) no-repeat fixed center/cover;
+@media only screen and (max-width:760px) {
+    body {
+        background: url(../images/lookbook/lookbook-background-1-m.jpg) no-repeat fixed center/cover;
+    }
 }
 
-body.chic{
+body.chic {
     background: url(../images/lookbook/lookbook-background-2.jpg) no-repeat fixed center/cover;
 }
 
-body.chicm{
+body.chicm {
     background: url(../images/lookbook/lookbook-background-2-m.jpg) no-repeat fixed center/cover;
 }
 
-body.dream{
+body.dream {
     background: url(../images/lookbook/lookbook-background-3.jpg) no-repeat fixed center/cover;
 }
 
-body.dreamm{
+body.dreamm {
     background: url(../images/lookbook/lookbook-background-3-m.jpg) no-repeat fixed center/cover;
 }
 
-body.pure{
+body.pure {
     background: url(../images/lookbook/lookbook-background-4.jpg) no-repeat fixed center/cover;
 }
 
-body.purem{
+body.purem {
     background: url(../images/lookbook/lookbook-background-4-m.jpg) no-repeat fixed center/cover;
 }
 
@@ -77,11 +78,11 @@ body.purem{
     display: none;
 }
 
-.mimg{
+.mimg {
     display: none;
 }
 
-.contbx{
+.contbx {
     opacity: 0;
 }
 
@@ -489,7 +490,7 @@ body.purem{
     opacity: 0;
 }
 
-#ptbx2{
+#ptbx2 {
     opacity: 0;
 }
 
