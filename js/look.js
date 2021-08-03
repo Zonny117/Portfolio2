@@ -4,16 +4,6 @@ $(function () {
 
     $(window).on('mousewheel DOMMouseScroll', function () {
 
-        let prot = 0;
-
-        if (prot) return;
-
-        prot = 1;
-
-        setTimeout(function () {
-            prot = 0;
-        }, 1500)
-
         // 배경 변경
         let topbx = $("#topbx").offset().top;
 
@@ -231,16 +221,6 @@ $(function () {
     }); ///////////////
 
     $("html,body").on('touchstart touchend', function () {
-
-        let prot = 0;
-
-        if (prot) return;
-
-        prot = 1;
-
-        setTimeout(function () {
-            prot = 0;
-        }, 1500)
 
         //배경 변경
         let topbx = $("#topbx").offset().top;
