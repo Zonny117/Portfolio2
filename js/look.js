@@ -1,6 +1,7 @@
 // lookbook 페이지 스크립트
 
-$(function () {
+
+$(window).on('load', function () {
 
     $(window).on('mousewheel DOMMouseScroll', function () {
 
