@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neker | 네케르</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/media_sub.css">
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.easeScroll.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/link.js"></script>
+    <script src="js/login.js"></script>
+</head>
+
+<body class="logbd">
+    <div class="wrap">
+        <div id="topbx">
+            <!-- 상단메뉴 -->
+            <div id="top">
+                <!-- 네비게이션 -->
+                <ul class="gnb">
+                    <li>
+                        <a href="#">Face</a>
+                    </li>
+                    <li>
+                        <a href="#">Lip</a>
+                    </li>
+                    <li>
+                        <a href="#">Eye</a>
+                    </li>
+                    <li>
+                        <a href="#">Skincare</a>
+                    </li>
+                </ul>
+                <!-- 스토어 -->
+                <ul class="store">
+                    <li>
+                        <a href="#" class="storeTit">Neker Store</a>
+                        <ol>
+                            <li>
+                                <a href="#">LU42 온라인스토어</a>
+                            </li>
+                            <li>
+                                <a href="#">네이버 스마트스토어</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+                <!-- 토글용 상단메뉴 -->
+                <div id="top2">
+                    <div id="product">
+                        <ul class="Product">
+                            <li class="ptit">Products</li>
+                            <li>
+                                <a href="#">Face</a>
+                            </li>
+                            <li>
+                                <a href="#">Lip</a>
+                            </li>
+                            <li>
+                                <a href="#">Eye</a>
+                            </li>
+                            <li>
+                                <a href="#">Skincare</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="about">
+                        <ul class="about">
+                            <li class="atit">About Us</li>
+                            <li>
+                                <a href="#">Brand Story</a>
+                            </li>
+                            <li>
+                                <a href="#">Lookbook</a>
+                            </li>
+                            <li>
+                                <a href="#">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 로고 -->
+                <div class="mlogo">
+                    <h1>
+                        <a href="index.html">
+                            <img src="images/logo-white.svg" alt="로고">
+                        </a>
+                    </h1>
+                </div>
+                <!-- 햄버거 -->
+                <div class="ham">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!-- 메인 영역 -->
+            <div class="loginbx wid">
+                <div class="login">
+                    <h2 class="logtxt">LOGIN</h2>
+                    <form action="login.php" method="POST">
+                        <div class="idbx">
+                            <label for="id" class="idlab">ID</label>
+                            <input type="text" name="id" class="id" maxlength="10" placeholder="아이디를 입력하세요.">
+                        </div>
+                        <div class="pwbx">
+                            <label for="pw" class="pwlab">PASSWORD</label>
+                            <input type="password" name="pw" class="pw" maxlength="10" placeholder="비밀번호를 입력하세요.">
+                        </div>
+                        <div class="checkbx">
+                            <span>
+                                <input type="checkbox" name="check" class="check">
+                                <label for="check" class="checklab">아이디저장</label> |
+                                <a href="#" class="search">아이디/비밀번호찾기</a>
+                            </span>
+                        </div>
+                        <div class="sign">
+                            <div class="submitbx">
+                                <a href="member.html" class="signUp">
+                                    회원가입
+                                </a>
+                                <input type="submit" class="signIn" value="확인">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

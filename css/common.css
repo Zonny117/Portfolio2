@@ -1,10 +1,6 @@
 @charset "utf-8";
 /* 공통 모듈CSS */
 
-
-@import url(reset.css);
-@import url(core.css);
-
 /*///////////////////////////////////////////////// 상단영역 /////////////////////////////////*/
 #topbx {
     width: 100%;
@@ -106,6 +102,7 @@
     left: 180px;
     bottom: 9px;
     display: flex;
+    transition: .6s;
 }
 
 .gnb>li {

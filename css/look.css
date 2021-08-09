@@ -1,0 +1,523 @@
+@charset "utf-8";
+/* 서브페이지 lookbook CSS */
+
+@import url(core.css);
+@import url(reset.css);
+
+body {
+    background: url(../images/lookbook/lookbook-background-1.jpg) no-repeat fixed center/cover;
+    transition: 1.2s;
+}
+
+@media only screen and (max-width:760px) {
+    body {
+        background: url(../images/lookbook/lookbook-background-1-m.jpg) no-repeat fixed center/cover;
+    }
+}
+
+body.chic {
+    background: url(../images/lookbook/lookbook-background-2.jpg) no-repeat fixed center/cover;
+}
+
+body.chicm {
+    background: url(../images/lookbook/lookbook-background-2-m.jpg) no-repeat fixed center/cover;
+}
+
+body.dream {
+    background: url(../images/lookbook/lookbook-background-3.jpg) no-repeat fixed center/cover;
+}
+
+body.dreamm {
+    background: url(../images/lookbook/lookbook-background-3-m.jpg) no-repeat fixed center/cover;
+}
+
+body.pure {
+    background: url(../images/lookbook/lookbook-background-4.jpg) no-repeat fixed center/cover;
+}
+
+body.purem {
+    background: url(../images/lookbook/lookbook-background-4-m.jpg) no-repeat fixed center/cover;
+}
+
+.biglogo>span {
+    right: 0;
+    font-size: 20px;
+    text-align: right;
+    bottom: 400px;
+}
+
+.blogobx {
+    height: 100%;
+}
+
+.blogobx img {
+    position: absolute;
+    bottom: 0;
+}
+
+
+.facebx {
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+}
+
+.facebx2 {
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.facebx2>div {
+    flex: 1;
+}
+
+.mptxt1,
+.mptxt2,
+.mptxt3 {
+    display: none;
+}
+
+.mimg {
+    display: none;
+}
+
+.contbx {
+    opacity: 0;
+}
+
+/* 컨텐츠 영역 */
+.c1 {
+    margin-top: 200px;
+    margin-left: 50%;
+    padding: 3.6%;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.c1 a {
+    position: relative;
+    right: -7.3vw;
+    width: 31.2vw;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 10px;
+    opacity: 0;
+    top: 50%;
+}
+
+
+/* 비율유지 가상 박스 */
+.c1 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+.cont1 a {
+    background: url(../images/lookbook/lookbook-list-1.jpg) no-repeat center/cover;
+}
+
+.cont1 a img {
+    position: absolute;
+    width: 12vw;
+    bottom: -20%;
+    left: 0;
+    background: url(../images/lookbook/lookbook-chic-typo-2-2.svg) no-repeat bottom/100%;
+}
+
+.cont1 span {
+    position: absolute;
+    bottom: -32%;
+    left: 0;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.cont2 a {
+    background: url(../images/lookbook/lookbook-list-2.jpg) no-repeat center/cover;
+}
+
+.cont2 a img {
+    position: absolute;
+    width: 12vw;
+    bottom: -20%;
+    left: 0;
+    background: url(../images/lookbook/lookbook-dream-typo-2-2.svg) no-repeat bottom/100%;
+}
+
+.cont2 span {
+    position: absolute;
+    bottom: -32%;
+    left: 0;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.cont3 a {
+    background: url(../images/lookbook/lookbook-list-3.jpg) no-repeat center/cover;
+}
+
+.cont3 a img {
+    position: absolute;
+    width: 12vw;
+    bottom: -20%;
+    left: 0;
+    background: url(../images/lookbook/lookbook-pure-typo-2-2.svg) no-repeat bottom/100%;
+}
+
+.cont3 span {
+    position: absolute;
+    bottom: -32%;
+    left: 0;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+
+
+.lookbx {
+    width: 100%;
+    margin-top: 20%;
+    height: auto;
+    color: #fff;
+}
+
+
+.wooheebx {
+    position: relative;
+}
+
+.wooheebx>span {
+    font-weight: bold;
+    opacity: 0;
+}
+
+.ptbx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 30%;
+    margin-left: 27.8%;
+    font-size: 1vw;
+    opacity: 0;
+}
+
+.ptbx span {
+    position: absolute;
+    left: -2%;
+    bottom: 5%;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+}
+
+/* 천우희 이미지 */
+.woohee {
+    position: relative;
+    width: 60vw;
+    border-radius: 10px;
+}
+
+/* 천우희 이미지 텍스트 */
+.muse {
+    position: absolute;
+    width: 40vw;
+    top: -42%;
+    left: 5%;
+    background: url(../images/lookbook/lookbook-chic-typo-2-2.svg) no-repeat bottom/100%;
+    z-index: 1;
+}
+
+
+/* 네케르 스토리 */
+.nstory {
+    color: #fff;
+    text-align: right;
+    margin-top: 10%;
+    padding-right: 10vw;
+    font-weight: bold;
+}
+
+/*////////////////////////////// 김혜준//////////////////////////////////////// */
+
+.hybx {
+    position: relative;
+    opacity: 0;
+}
+
+.hybx span {
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg) translateY(-70%);
+}
+
+/* 김혜준 이미지 */
+.hyejun {
+    position: relative;
+    left: 0vw;
+    top: 170px;
+    width: 58vw;
+    border-radius: 10px;
+}
+
+/* 메이크업 */
+.makeup {
+    color: #fff;
+    margin-top: 202px;
+    padding-left: 5vw;
+    font-weight: bold;
+    opacity: 0;
+}
+
+/* /////////////////// 플라워 가든//////////////////////////////////// */
+.flowerbx {
+    position: relative;
+    margin-top: 10%;
+}
+
+.ptbx2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left: 27.8%;
+    opacity: 0;
+}
+
+.ptbx2>span {
+    position: absolute;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    bottom: 5%;
+    left: -2%;
+    font-size: 1vw;
+}
+
+
+/* 플라워가든 이미지 */
+.fgImg {
+    width: 60vw;
+    border-radius: 10px;
+}
+
+
+.recomand {
+    position: relative;
+    margin-top: 5%;
+    text-align: right;
+}
+
+.recomand span {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0;
+}
+
+.recomand span b {
+    font-size: 24px;
+}
+
+.fc1 {
+    /* position: relative; */
+    margin-top: 200px;
+    margin-left: 50%;
+    padding: 3.6%;
+    box-sizing: border-box;
+    width: 50%;
+    color: #000;
+}
+
+.fc1 a {
+    position: relative;
+    right: -7.3vw;
+    width: 31.2vw;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+    top: 50%;
+    opacity: 0;
+}
+
+
+/* 비율유지 가상 박스 */
+.fc1 a::before {
+    content: '';
+    display: block;
+    padding-top: 155%;
+}
+
+.fc1 h2 {
+    font-size: 3vw;
+    white-space: nowrap;
+}
+
+.fc1 span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    font-weight: lighter;
+}
+
+.fc1 span:nth-of-type(2) {
+    margin-top: 23px;
+    color: #ccc;
+}
+
+.fc1 span:nth-of-type(3) {
+    margin-top: 23px;
+}
+
+.fc1 img {
+    position: absolute;
+    bottom: 7%;
+    right: 10.5%;
+    width: 80%;
+    transition: opacity .6s;
+}
+
+.fc1 a:hover img {
+    opacity: .6;
+}
+
+
+.lookbx2 {
+    width: 100%;
+    margin-top: 20%;
+    height: auto;
+    color: #fff;
+}
+
+
+.wooheebx2 {
+    position: relative;
+}
+
+.wooheebx2>span {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    opacity: 0;
+}
+
+
+.muse2 {
+    position: absolute;
+    width: 40vw;
+    top: -36%;
+    left: 5%;
+    background: url(../images/lookbook/lookbook-dream-typo-2-2.svg) no-repeat bottom/100%;
+    z-index: 1;
+}
+
+#ptbx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 30%;
+    margin-right: 27.5%;
+    font-size: 1vw;
+    opacity: 0;
+}
+
+#ptbx span {
+    position: absolute;
+    bottom: 5%;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+}
+
+.woohee2 {
+    position: relative;
+    width: 60vw;
+    border-radius: 10px;
+}
+
+
+.nstory2 {
+    color: #fff;
+    text-align: left;
+    margin-top: 5%;
+    padding-left: 10vw;
+    opacity: 0;
+}
+
+.nstory2 .bold {
+    font-weight: bold;
+}
+
+.nstory2 li:nth-child(3) {
+    margin-top: 2%;
+}
+
+
+.hybx2 {
+    position: relative;
+    margin-top: 5%;
+}
+
+.hybx2 span {
+    position: absolute;
+    left: -3%;
+    writing-mode: vertical-lr;
+    bottom: 5%;
+    white-space: nowrap;
+    font-size: 1vw;
+}
+
+.hypt {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left: 30.2%;
+    opacity: 0;
+}
+
+/* 김혜준 이미지 */
+.hyejun2 {
+    width: 58vw;
+    border-radius: 10px;
+}
+
+/* 메이크업 */
+.makeup2 {
+    text-align: right;
+    color: #fff;
+    margin-top: 5%;
+    padding-right: 5vw;
+    font-weight: bold;
+    opacity: 0;
+}
+
+#ptbx2 {
+    opacity: 0;
+}
+
+#ptbx2 span {
+    writing-mode: vertical-lr;
+    transform: translateY(-20%) rotate(-180deg);
+    font-size: 1vw;
+}
+
+
+.muse3 {
+    position: absolute;
+    width: 40vw;
+    top: -29%;
+    left: 5%;
+    background: url(../images/lookbook/lookbook-pure-typo-2-2.svg) no-repeat bottom/100%;
+    z-index: 1;
+}
+
+body .skinspan {
+    transform: translateY(100%) rotate(-180deg);
+}
+
+.makeup3 {
+    color: #fff;
+    margin-top: 202px;
+    padding-right: 5vw;
+    font-weight: bold;
+    text-align: right;
+}

@@ -13,11 +13,14 @@ $(function(){
         
         // 해당 메뉴명과 일치한 속성명의 값에 url 주소 변수 넣기
         switch(txt){///////////////
-            case "Face" : url="face.html"; break;
+            case "Brand Story" : url="brand.html"; break;
+            case "Lookbook" : url="look.html"; break;
+            case "Login" : url="login.html"; break;
+            default : url="sub.html?won=" + txt;
         }////////////////////////
 
         // url 변수로 이동
-        location.href = url;
+        location.href = url
 
     });//////////////////////////
 

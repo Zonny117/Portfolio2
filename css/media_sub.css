@@ -3,6 +3,28 @@
 
 @media only screen and (max-width:760px) {
 
+    /* about 서브 페이지 컨텐츠 세팅 */
+    body .cbx {
+        width: 100%;
+        padding: 0px;
+        margin: 0;
+        transform: unset;
+        box-sizing: border-box;
+    }
+
+    #cbx {
+        padding: 0px 10px;
+    }
+
+    #cc {
+        position: relative;
+        width: auto;
+        right: unset;
+        left: unset;
+        transform: unset;
+    }
+
+
     /* 공통 박스 가로크기 */
     .wid {
         width: 90%;
@@ -19,6 +41,249 @@
         font-size: 6vw;
 
     }
+
+    /*  메인로고 리사이즈 */
+    body #resize {
+        width: 46vw;
+    }
+
+
+    /*/////////////////////////////////////// 브랜드 사이트/////////////////////////// */
+    body #mtxt span {
+        font-size: 2.5vw;
+        letter-spacing: unset;
+    }
+
+    body .thatbx::before {
+        padding-top: 53%;
+    }
+
+    body .wh {
+        width: 40vw;
+        top: 38%;
+    }
+
+    body .whtxt {
+        margin-top: unset;
+        font-size: 2.5vw;
+    }
+
+    body .whtxt2 {
+        font-size: 2.5vw;
+    }
+
+    body .whm {
+        margin-top: 30px;
+    }
+
+    body #null {
+        background: url(../images/brand/bg.jpg) no-repeat center/100%;
+    }
+
+
+    /*//////////////////////////// lookbook 사이트///////////////////////////// */
+    .c1 .contbx1>img,
+    .c1 .contbx1>span {
+        display: none;
+    }
+
+    .c1 .contbx2>img,
+    .c1 .contbx2>span {
+        display: none;
+    }
+
+    .c1 .contbx3>img,
+    .c1 .contbx3>span {
+        display: none;
+    }
+
+
+    .mptxt1,
+    .mptxt2,
+    .mptxt3 {
+        display: block;
+        opacity: 0;
+    }
+
+    .mptxt1 img {
+        width: 45vw;
+        background: url(../images/lookbook/lookbook-chic-typo-2-2.svg) no-repeat center/100%;
+    }
+
+    .mptxt1 span {
+        position: unset;
+        display: block;
+        color: #fff;
+        font-size: 2vw;
+    }
+
+    .mptxt2 img {
+        width: 45vw;
+        background: url(../images/lookbook/lookbook-dream-typo-2-2.svg) no-repeat center/100%;
+    }
+
+    .mptxt2 span {
+        position: unset;
+        display: block;
+        color: #fff;
+        font-size: 2vw;
+    }
+
+    .mptxt3 img {
+        width: 45vw;
+        background: url(../images/lookbook/lookbook-pure-typo-2-2.svg) no-repeat center/100%;
+    }
+
+    .mptxt3 span {
+        position: unset;
+        display: block;
+        color: #fff;
+        font-size: 2vw;
+    }
+
+    .woohee {
+        display: none;
+    }
+
+    .hyejun {
+        display: none;
+    }
+
+    .hyejun2 {
+        display: none;
+    }
+
+    .fgImg {
+        display: none;
+    }
+
+    .muse {
+        width: 59vw;
+        top: -31%;
+    }
+
+    .muse2 {
+        left: unset;
+        width: 59vw;
+        top: -13%;
+    }
+
+    .muse3 {
+        width: 59vw;
+        top: -22%;
+    }
+
+    .mimg {
+        display: unset;
+    }
+
+    .mimg1,
+    .mimg7 {
+        position: relative;
+        width: 60vw;
+        left: 4.5%;
+        border-radius: 10px;
+    }
+
+    .mimg2,
+    .mimg8 {
+        width: 60vw;
+        border-radius: 10px;
+        margin-top: 10%;
+    }
+
+    .mimg3,
+    .mimg9 {
+        position: relative;
+        width: 60vw;
+        left: 4.5%;
+        border-radius: 10px;
+    }
+
+    .mimg4 {
+        width: 60vw;
+        border-radius: 10px;
+        margin-top: 10%;
+    }
+
+    .mimg5 {
+        position: relative;
+        width: 60vw;
+        left: 2.3%;
+        border-radius: 10px;
+    }
+
+    .mimg6 {
+        width: 60vw;
+        border-radius: 10px;
+        margin-top: 10%;
+    }
+
+    .wooheebx>span {
+        display: block;
+        text-align: right;
+        font-size: 2vw;
+    }
+
+    .wooheebx2>span {
+        text-align: left;
+        font-size: 2vw;
+    }
+
+    .ptbx span {
+        left: -1%;
+        font-size: 2vw;
+    }
+
+    .ptbx2>span {
+        left: 0%;
+        font-size: 2vw;
+    }
+
+    #ptbx2 span {
+        font-size: 2vw;
+    }
+
+    .hybx span {
+        transform: rotate(-180deg) translateY(17%);
+        font-size: 2vw;
+    }
+
+    .hybx2 span {
+        left: -2%;
+        transform: rotate(-180deg);
+        font-size: 2vw;
+    }
+
+    .nstory {
+        padding-right: unset;
+        font-size: 2vw;
+    }
+
+    .nstory2 {
+        padding-left: unset;
+        font-size: 2vw;
+    }
+
+    .makeup {
+        margin-top: 10%;
+        padding-left: unset;
+        font-size: 2vw;
+    }
+
+    .makeup2 {
+        padding-right: unset;
+        font-size: 2vw;
+    }
+
+    .makeup3 {
+        margin-top: 10%;
+        padding-right: unset;
+        font-size: 2vw;
+        text-align: left;
+    }
+
+
 
     /* /////////////////////////////상단 영역 ////////////////////*/
 
@@ -42,10 +307,6 @@
         line-height: 30px;
     }
 
-
-    .biglogo img {
-        width: 76vw;
-    }
 
     /* 상단 상점 메뉴 */
     .store {
@@ -92,6 +353,7 @@
     #top2.on {
         opacity: 1;
         height: 100vh;
+        overflow-y: auto;
     }
 
     #product ul {
@@ -101,6 +363,7 @@
     #product,
     #about {
         margin-top: 7%;
+        margin-left: 22%;
     }
 
     #product li:hover a::after,
@@ -108,6 +371,12 @@
         width: 30%;
         border-bottom: 3px solid #fff;
     }
+
+
+    .biglogo img {
+        width: 70vw;
+    }
+
 
     /* 푸터 영역 */
     footer {
@@ -161,6 +430,118 @@
 
     .store {
         right: 63px;
+    }
+
+    body .member ul {
+        width: 100%;
+    }
+
+    .member label{
+        width: 85px;
+    }
+
+    #email1{
+        width: 123px;
+    }
+
+}
+
+
+@media only screen and (max-width:850px) {
+
+    /* //////////////////////////////////////////////// 로그인 사이트/////////////////////////////// */
+    .logbd::before {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+    }
+
+    .login {
+        width: 100%;
+        height: auto;
+        background-color: unset;
+        border: none;
+    }
+
+    .logtxt{
+        margin-top: 40px;
+    }
+
+    .idlab,
+    .pwlab,
+    .check,
+    .signUp {
+        margin-left: unset;
+    }
+
+    .idlab,
+    .pwlab {
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    .checkbx>span {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    .submitbx {
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    .signUp,
+    .signIn {
+        width: 95px;
+    }
+
+    /* ///////////////////////////////////////////////회원가입/////////////////////////////////// */
+    .member {
+        background-color: unset;
+        border: none;
+        width: 100%;
+        padding: 0;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+    }
+
+    .memtxt {
+        margin-top: 46%;
+        margin-bottom: 10%;
+    }
+
+
+    .member input[type=text],
+    .member input[type=password] {
+        width: 143px;
+    }
+
+    .member ul {
+        width: 277px;
+    }
+
+    .member li {
+        margin: 0 auto;
+    }
+
+    .member li:nth-child(6) {
+        margin-top: 10px;
+    }
+
+    body .email1 {
+        display: block;
+    }
+
+    body #email2 {
+        margin-left: 74px;
+        float: none;
+    }
+
+
+    #btnj {
+        display: block;
+        float: none;
+        margin: 0 auto;
     }
 
 }

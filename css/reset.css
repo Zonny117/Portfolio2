@@ -48,3 +48,8 @@ body .cbx{
     left: unset;
     transform: unset;
 }
+
+/* 서브페이지 메인 로고 크기 수정 */
+#resize{
+    width: 19vw;
+}

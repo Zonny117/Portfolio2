@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+@import url(core.css);
+@import url(reset.css);
+
+
+body {
+    background: url(../images/login/bg.jpg) no-repeat fixed center/cover;
+    color: #fff;
+}
+
+body::before {
+    animation: unset;
+}
+
+input:focus {
+    outline: none;
+}
+
+.loginbx {
+    position: relative;
+    height: 100%;
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    background-color: rgba(7, 7, 7, 0.459);
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid #373737;
+}
+
+.logtxt {
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+/* 아이디 영역 */
+.idbx {
+    padding-top: 20px;
+}
+
+.idlab {
+    display: block;
+    margin-left: 40px;
+    font-weight: bold;
+}
+
+.id {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 20px;
+}
+
+
+/* 비밀번호영역 */
+.pwbx {
+    margin-top: 10px;
+}
+
+.pwlab {
+    display: block;
+    margin-left: 40px;
+    font-weight: bold;
+}
+
+.pw {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 20px;
+}
+
+/* 체크박스 영역 */
+.checkbx {
+    margin-top: 10px;
+}
+
+.check {
+    margin-left: 40px;
+    vertical-align: -1px;
+}
+
+.checklab {
+    font-size: 12px;
+}
+
+.search {
+    font-size: 12px;
+}
+
+/* 서브밋 영역 */
+.sign {
+    margin-top: 20px;
+}
+
+.signUp {
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-left: 40px;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    color: #000;
+    text-align: center;
+    line-height: 50px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.signIn {
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(to bottom, white, pink, salmon);
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid pink;
+    font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
+    cursor: pointer;
+}

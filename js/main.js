@@ -66,11 +66,8 @@ $(function () {
         $(".store").toggleClass("on");
 
         $(".mlogo").toggleClass("on");
+
     }); /////////////////////////////////
-
-
-
-
     /////////////////// //////////모바일 터치 상위 메뉴 이벤트////////////////////////////////////
 
     $(document).on('touchstart touchend', function (e) {
@@ -95,7 +92,7 @@ $(function () {
 
         let deltaY = tS - tE;
         // console.log("터치 위치값: " + deltaY);
-        console.log(deltaY)
+        // console.log(deltaY)
 
         // 상단메뉴 터치시 기준값이 0이면 미세한 터치차이로 인해 상단메뉴가 사라질수 있기 때문에
         // 기준값을 살짝 늘려줌, 터치 윗방향 스와이프만 설정.
@@ -103,22 +100,27 @@ $(function () {
         if (deltaY > 30) {
 
             // 모바일 가로 모드일때 터치시 상단 메뉴 높이 조정
-            $("#top").css({
-                padding: "-50px",
-                height: "-50px"
+            // $("#top").css({
+            //     padding: "-50px",
+            //     height: "-50px"
+            // })
+
+            $(".gnb").css({
+                top: "-130px",
+                bottom: "unset"
             })
 
             $(".store").css({
-                top: "-50px",
+                top: "-130px",
             })
 
             $(".ham").css({
-                top: "-50px"
+                top: "-130px"
             })
 
 
             $(".mlogo").css({
-                top: "-80px"
+                top: "-130px"
             })
 
             // 토글메뉴 햄버거버튼 고정
@@ -131,18 +133,18 @@ $(function () {
                 top: "13px"
             })
 
-            // 모바일에서 .store 메뉴가 열린 상태에서 스크롤 내려가면 숨기기
-            $(".store ol").css({
-                opacity: 0
-            });
-
         } ///////////////////////
         ///////////////////////
         else {
             // 모바일 가로 모드일때 터치시 상단 메뉴 높이 조정
-            $("#top").css({
-                padding: "30px",
-                height: "94px"
+            // $("#top").css({
+            //     padding: "30px",
+            //     height: "94px"
+            // })
+
+            $(".gnb").css({
+                top: "14px",
+                bottom: "unset"
             })
 
             $(".store").css({
@@ -157,10 +159,6 @@ $(function () {
                 top: "13px"
             })
 
-            // 모바일에서 .store 메뉴가 열린 상태에서 스크롤 올라가면 보이기
-            $(".store ol").css({
-                opacity: 1
-            });
         } ////////////////////////
 
 
@@ -199,6 +197,11 @@ $(function () {
                 height: "0px"
             })
 
+            $(".gnb").css({
+                top: "unset",
+                bottom: "9px"
+            })
+
             $(".store").css({
                 top: "-50px",
             })
@@ -230,6 +233,11 @@ $(function () {
                 height: "114px"
             })
 
+            $(".gnb").css({
+                top: "unset",
+                bottom: "9px"
+            })
+
             $(".store").css({
                 top: "68px",
             })
@@ -242,26 +250,10 @@ $(function () {
                 top: "30px"
             })
         } /////////////////////
-    }); ///////////////////////////////
-
-    $("html, body").on('mousewheel DOMMouseScroll', function (e) {
-
-        // DOMMouseScroll 대소문자 주의!!!!!!!!!!!! 스크롤도 대문자로 시작함
-
-        let E = e.originalEvent.deltaY;
-        // deltaY - 마우스휠 Y축 방향값
-
-        //// 크로스 브라우징 (파이어 폭스 마우스 휠)
-        if (/Firefox/i.test(navigator.userAgent)) {
-            E = e.originalEvent.detail;
-
-            console.log("파이어폭스휠 " + E);
-        } ///////// 파이어폭스여부 if문 /////////////
 
         // #top2에 클래스가 들어간 상태에서 마우스 스크롤이 내려갈때 
         // 클래스 on이 있는 햄버거 버튼 클릭시 상단메뉴 고정
         // 스크롤 올릴시 햄버거 버튼과 로고만 남아있는 이질감 방지
-
         $(".ham.on").click(function () { // 스크롤시 양수이기 때문에 아래방향
 
             if (E > 0) {
@@ -275,11 +267,8 @@ $(function () {
                 })
             } ///////////////////////
         }) /////////////////////////
-    }) ///////////////////
-    ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
+    }); ///////////////////////////////
 
 
 }); ///////////////////////////jQB////////////////////////////////////
