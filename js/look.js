@@ -220,7 +220,8 @@ $(function () {
 
     }); ///////////////
 
-    $(document).on('touchstart', function () {
+    $(document).on('touchstart touchend', function (e) {
+        e.stopPropagation();
 
         //배경 변경
         let topbx = $("#topbx").offset().top;
