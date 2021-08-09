@@ -235,29 +235,23 @@ $(window).on('load', function () {
         let pure = $(".lookbx3").offset().top;
         // console.log("세번째" + pure);
 
-        let bdW = $("body").width();
-
-        if (bdW <= 760) {
-
-            // console.log(bdW <= 760)
-
-            if (topbx <= 0) {
-                $("body").removeClass()
-            }
-
-            if (chic <= 200) {
-                $("body").removeClass().addClass("chicm")
-            }
-
-            if (dream <= 200) {
-                $("body").removeClass().addClass("dreamm")
-            }
-
-            if (pure <= 200) {
-                $("body").removeClass().addClass("purem")
-            }
-
+        if (topbx <= 0) {
+            $("body").removeClass()
         }
+
+        if (chic <= 0) {
+            $("body").removeClass().addClass("chicm")
+        }
+
+        if (dream <= 0) {
+            $("body").removeClass().addClass("dreamm")
+        }
+
+        if (pure <= 0) {
+            $("body").removeClass().addClass("purem")
+        }
+
+
 
         let facebx2 = $(".facebx2").offset().top;
 
