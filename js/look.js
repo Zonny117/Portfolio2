@@ -1,9 +1,10 @@
 // lookbook 페이지 스크립트
 
+$(function () {
 
-$(window).on('load', function () {
+    $(window).on('mousewheel DOMMouseScroll', function (e) {
 
-    $(window).on('mousewheel DOMMouseScroll', function () {
+
 
         // 배경 변경
         let topbx = $("#topbx").offset().top;
@@ -221,7 +222,8 @@ $(window).on('load', function () {
 
     }); ///////////////
 
-    $("html,body").on('touchstart touchend', function () {
+    $(document).on('touchstart touchend', function (e) {
+        e.stopPropagation();
 
         //배경 변경
         let topbx = $("#topbx").offset().top;
@@ -240,16 +242,17 @@ $(window).on('load', function () {
         }
 
         if (chic <= 200) {
-            $("body").removeClass().addClass("chicm")
+            $("body").removeClass().addClass("chic")
         }
 
         if (dream <= 200) {
-            $("body").removeClass().addClass("dreamm")
+            $("body").removeClass().addClass("dream")
         }
 
         if (pure <= 200) {
-            $("body").removeClass().addClass("purem")
+            $("body").removeClass().addClass("pure")
         }
+
 
 
         let facebx2 = $(".facebx2").offset().top;
