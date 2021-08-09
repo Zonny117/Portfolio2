@@ -1,7 +1,6 @@
 // lookbook 페이지 스크립트
 
-
-$(window).on('load', function () {
+$(function () {
 
     $(window).on('mousewheel DOMMouseScroll', function () {
 
@@ -221,7 +220,7 @@ $(window).on('load', function () {
 
     }); ///////////////
 
-    $("html,body").on('touchstart touchend', function () {
+    $(document).on('touchstart', function () {
 
         //배경 변경
         let topbx = $("#topbx").offset().top;
@@ -239,15 +238,15 @@ $(window).on('load', function () {
             $("body").removeClass()
         }
 
-        if (chic <= 0) {
+        if (chic <= 200) {
             $("body").removeClass().addClass("chicm")
         }
 
-        if (dream <= 0) {
+        if (dream <= 200) {
             $("body").removeClass().addClass("dreamm")
         }
 
-        if (pure <= 0) {
+        if (pure <= 200) {
             $("body").removeClass().addClass("purem")
         }
 
