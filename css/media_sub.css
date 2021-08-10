@@ -83,7 +83,12 @@
 
     /*//////////////////////////// lookbook 사이트///////////////////////////// */
 
-    .bgim.on{
+    .bgi.on {
+        display: none;
+    }
+
+    /* 모바일 화면에서만 첫번째 배경화면이 변경되야하므로 미디어쿼리에 설정 */
+    .bgim.on {
         opacity: 1;
     }
 
@@ -441,11 +446,11 @@
         width: 100%;
     }
 
-    .member label{
+    .member label {
         width: 85px;
     }
 
-    #email1{
+    #email1 {
         width: 123px;
     }
 
@@ -467,7 +472,7 @@
         border: none;
     }
 
-    .logtxt{
+    .logtxt {
         margin-top: 40px;
     }
 

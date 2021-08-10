@@ -5,9 +5,9 @@ $(function () {
     $(window).on('mousewheel DOMMouseScroll', function (e) {
 
         for (let bgnum = 0; bgnum < 4; bgnum++) {
-            // 배경 변경
+            // 각 섹션 시작위치
             let bg = $(".bgt" + bgnum).offset().top;
-
+            // 각 섹션 도달시 배경이미지 변경 클래스
             if (bg <= 0) {
                 $(".bgi").eq(bgnum).addClass("on").siblings().removeClass("on");
             }
@@ -203,9 +203,9 @@ $(function () {
     $(document).on('touchstart touchend', function (e) {
 
         for (let bgnum = 0; bgnum < 4; bgnum++) {
-            // 배경 변경
-            let bg = $(".bgt" + bgnum).offset().top;
 
+            let bg = $(".bgt" + bgnum).offset().top;
+            // 모바일 배경이미지 변경 클래스
             if ($(window).width() <= 760 && bg <= 0) {
                 $(".bgim").eq(bgnum).addClass("on").siblings().removeClass("on");
             }

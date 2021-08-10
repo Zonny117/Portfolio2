@@ -4,11 +4,31 @@
 @import url(core.css);
 @import url(reset.css);
 
-body{
+body {
     position: relative;
 }
 
-.bgi{
+
+/*
+body background에 배경 이미지를 설정해서 클래스로 교체하면 깜빡이는 현상발생.
+따라서, 이미지를 미리 로드해서 클래스로 투명도 설정하여 이미지 변경 구현해야함.
+ */
+/* 데스크탑용 */
+.bgi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    /* z-index -1는 body::before로 검정 반투명 화면 처리했으므로 우선순위 아래 설정 */
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+/* 모바일용 */
+.bgim {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,19 +40,7 @@ body{
     transition: opacity .4s;
 }
 
-.bgim{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-    opacity: 0;
-    transition: opacity .4s;
-}
-
-.bgi.on{
+.bgi.on {
     opacity: 1;
 }
 
