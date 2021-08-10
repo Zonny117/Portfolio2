@@ -4,36 +4,14 @@ $(function () {
 
     $(window).on('mousewheel DOMMouseScroll', function (e) {
 
+        for (let bgnum = 0; bgnum < 4; bgnum++) {
+            // 배경 변경
+            let bg = $(".bgt" + bgnum).offset().top;
 
-
-        // 배경 변경
-        let topbx = $("#topbx").offset().top;
-
-        let chic = $(".lookbx").offset().top;
-        // console.log("첫번째" + chic);
-
-        let dream = $(".lookbx2").offset().top;
-        // console.log("두번째" + dream);
-
-        let pure = $(".lookbx3").offset().top;
-        // console.log("세번째" + pure);
-
-        if (topbx <= 0) {
-            $("body").removeClass()
+            if (bg <= 0) {
+                $(".bgi").eq(bgnum).addClass("on").siblings().removeClass("on");
+            }
         }
-
-        if (chic <= 200) {
-            $("body").removeClass().addClass("chic")
-        }
-
-        if (dream <= 200) {
-            $("body").removeClass().addClass("dream")
-        }
-
-        if (pure <= 200) {
-            $("body").removeClass().addClass("pure")
-        }
-
 
         let facebx2 = $(".facebx2").offset().top;
 
@@ -223,7 +201,15 @@ $(function () {
     }); ///////////////
 
     $(document).on('touchstart touchend', function (e) {
-        e.stopPropagation();
+
+        for (let bgnum = 0; bgnum < 4; bgnum++) {
+            // 배경 변경
+            let bg = $(".bgt" + bgnum).offset().top;
+
+            if ($(window).width() <= 760 && bg <= 0) {
+                $(".bgim").eq(bgnum).addClass("on").siblings().removeClass("on");
+            }
+        }
 
         //배경 변경
         let topbx = $("#topbx").offset().top;

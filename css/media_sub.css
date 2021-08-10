@@ -82,6 +82,11 @@
 
 
     /*//////////////////////////// lookbook 사이트///////////////////////////// */
+
+    .bgim.on{
+        opacity: 1;
+    }
+
     .c1 .contbx1>img,
     .c1 .contbx1>span {
         display: none;

@@ -4,42 +4,37 @@
 @import url(core.css);
 @import url(reset.css);
 
-body {
-    background: url(../images/lookbook/lookbook-background-1.jpg) no-repeat fixed center/cover;
-    transition: 1.2s;
+body{
+    position: relative;
 }
 
-body.chic{
-    background: url(../images/lookbook/lookbook-background-2.jpg) no-repeat fixed center/cover;
+.bgi{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0;
+    transition: opacity .4s;
 }
 
-body.dream {
-    background: url(../images/lookbook/lookbook-background-3.jpg) no-repeat fixed center/cover;
+.bgim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0;
+    transition: opacity .4s;
 }
 
-body.pure {
-    background: url(../images/lookbook/lookbook-background-4.jpg) no-repeat fixed center/cover;
+.bgi.on{
+    opacity: 1;
 }
-
-@media only screen and (max-width:760px) {
-    body {
-        background: url(../images/lookbook/lookbook-background-1-m.jpg) no-repeat fixed center/cover;
-        transition: 1.2s;
-    }
-
-    body.chic {
-        background: url(../images/lookbook/lookbook-background-2-m.jpg) no-repeat fixed center/cover;
-    }
-
-    body.dream {
-        background: url(../images/lookbook/lookbook-background-3-m.jpg) no-repeat fixed center/cover;
-    }
-
-    body.pure {
-        background: url(../images/lookbook/lookbook-background-4-m.jpg) no-repeat fixed center/cover;
-    }
-}
-
 
 .biglogo>span {
     right: 0;
