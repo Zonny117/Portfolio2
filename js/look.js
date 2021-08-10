@@ -2,7 +2,9 @@
 
 $(function () {
 
-    $(window).on('mousewheel DOMMouseScroll', function () {
+    $(window).on('mousewheel DOMMouseScroll', function (e) {
+
+
 
         // 배경 변경
         let topbx = $("#topbx").offset().top;
@@ -221,7 +223,6 @@ $(function () {
     }); ///////////////
 
     $(document).on('touchstart touchend', function (e) {
-        e.stopPropagation();
 
         //배경 변경
         let topbx = $("#topbx").offset().top;
@@ -240,15 +241,15 @@ $(function () {
         }
 
         if (chic <= 200) {
-            $("body").removeClass().addClass("chicm")
+            $("body").removeClass().addClass("chic")
         }
 
         if (dream <= 200) {
-            $("body").removeClass().addClass("dreamm")
+            $("body").removeClass().addClass("dream")
         }
 
         if (pure <= 200) {
-            $("body").removeClass().addClass("purem")
+            $("body").removeClass().addClass("pure")
         }
 
 

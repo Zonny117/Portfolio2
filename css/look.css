@@ -9,34 +9,34 @@ body {
     transition: 1.2s;
 }
 
-@media only screen and (max-width:760px) {
-    body {
-        background: url(../images/lookbook/lookbook-background-1-m.jpg) no-repeat fixed center/cover;
-    }
-}
-
 body.chic {
     background: url(../images/lookbook/lookbook-background-2.jpg) no-repeat fixed center/cover;
-}
-
-body.chicm {
-    background: url(../images/lookbook/lookbook-background-2-m.jpg) no-repeat fixed center/cover;
 }
 
 body.dream {
     background: url(../images/lookbook/lookbook-background-3.jpg) no-repeat fixed center/cover;
 }
 
-body.dreamm {
-    background: url(../images/lookbook/lookbook-background-3-m.jpg) no-repeat fixed center/cover;
-}
-
 body.pure {
     background: url(../images/lookbook/lookbook-background-4.jpg) no-repeat fixed center/cover;
 }
 
-body.purem {
-    background: url(../images/lookbook/lookbook-background-4-m.jpg) no-repeat fixed center/cover;
+@media only screen and (max-width:760px) {
+    body {
+        background: url(../images/lookbook/lookbook-background-1-m.jpg) no-repeat fixed center/cover;
+    }
+
+    body.chic {
+        background: url(../images/lookbook/lookbook-background-2-m.jpg) no-repeat fixed center/cover;
+    }
+
+    body.dream {
+        background: url(../images/lookbook/lookbook-background-3-m.jpg) no-repeat fixed center/cover;
+    }
+
+    body.pure {
+        background: url(../images/lookbook/lookbook-background-4-m.jpg) no-repeat fixed center/cover;
+    }
 }
 
 .biglogo>span {
