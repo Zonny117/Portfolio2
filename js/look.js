@@ -4,8 +4,6 @@ $(function () {
 
     $(window).on('mousewheel DOMMouseScroll', function (e) {
 
-
-
         // 배경 변경
         let topbx = $("#topbx").offset().top;
 
@@ -222,7 +220,7 @@ $(function () {
 
     }); ///////////////
 
-    $(document).on('touchstart touchend', function (e) {
+    $(document).on('load touchstart touchend', function (e) {
 
         //배경 변경
         let topbx = $("#topbx").offset().top;
