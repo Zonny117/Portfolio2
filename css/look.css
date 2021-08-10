@@ -5,6 +5,7 @@
 @import url(reset.css);
 
 body {
+    background: url(../images/lookbook/lookbook-background-1.jpg) no-repeat fixed center/cover;
     transition: 1.2s;
 }
 
@@ -20,14 +21,14 @@ body.pure {
     background: url(../images/lookbook/lookbook-background-4.jpg) no-repeat fixed center/cover;
 }
 
-body.normal {
-    background: url(../images/lookbook/lookbook-background-1.jpg) no-repeat fixed center/cover;
-}
-
 @media only screen and (max-width:760px) {
+    body {
+        background: url(../images/lookbook/lookbook-background-1-m.jpg) no-repeat fixed center/cover;
+        transition: 1.2s;
+    }
 
     body.chic {
-        background: url(../images/lookbook/lookbook-background-2-m.jpg) no-repeat fixed center/cover;
+        background: transparent url(../images/lookbook/lookbook-background-2-m.jpg) no-repeat fixed center/cover;
     }
 
     body.dream {
@@ -36,10 +37,6 @@ body.normal {
 
     body.pure {
         background: url(../images/lookbook/lookbook-background-4-m.jpg) no-repeat fixed center/cover;
-    }
-
-    body.normal {
-        background: url(../images/lookbook/lookbook-background-1-m.jpg) no-repeat fixed center/cover;
     }
 }
 

@@ -2,6 +2,8 @@
 
 $(function () {
 
+    let prot = 0;
+
     $(window).on('mousewheel DOMMouseScroll', function (e) {
 
         // 배경 변경
@@ -17,7 +19,7 @@ $(function () {
         // console.log("세번째" + pure);
 
         if (topbx <= 0) {
-            $("body").removeClass().addClass("normal")
+            $("body").removeClass()
         }
 
         if (chic <= 200) {
@@ -220,7 +222,7 @@ $(function () {
 
     }); ///////////////
 
-    $(document).on('load touchstart touchend', function (e) {
+    $(document).on('touchstart touchend', function (e) {
 
         //배경 변경
         let topbx = $("#topbx").offset().top;
@@ -235,7 +237,7 @@ $(function () {
         // console.log("세번째" + pure);
 
         if (topbx <= 0) {
-            $("body").removeClass().addClass("normal")
+            $("body").removeClass()
         }
 
         if (chic <= 200) {
