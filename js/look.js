@@ -19,7 +19,7 @@ $(function () {
         // console.log("세번째" + pure);
 
         if (topbx <= 0) {
-            $("body").removeClass()
+            $("body").removeClass().addClass("normal")
         }
 
         if (chic <= 200) {
@@ -237,7 +237,7 @@ $(function () {
         // console.log("세번째" + pure);
 
         if (topbx <= 0) {
-            $("body").removeClass()
+            $("body").removeClass().addClass("normal")
         }
 
         if (chic <= 200) {
