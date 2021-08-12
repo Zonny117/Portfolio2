@@ -211,36 +211,6 @@ $(function () {
             }
         }
 
-        //배경 변경
-        let topbx = $("#topbx").offset().top;
-
-        let chic = $(".lookbx").offset().top;
-        // console.log("첫번째" + chic);
-
-        let dream = $(".lookbx2").offset().top;
-        // console.log("두번째" + dream);
-
-        let pure = $(".lookbx3").offset().top;
-        // console.log("세번째" + pure);
-
-        if (topbx <= 0) {
-            $("body").removeClass()
-        }
-
-        if (chic <= 200) {
-            $("body").removeClass().addClass("chic")
-        }
-
-        if (dream <= 200) {
-            $("body").removeClass().addClass("dream")
-        }
-
-        if (pure <= 200) {
-            $("body").removeClass().addClass("pure")
-        }
-
-
-
         let facebx2 = $(".facebx2").offset().top;
 
         let first = $(".cont1>a");
