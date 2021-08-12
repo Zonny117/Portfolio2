@@ -63,6 +63,25 @@
         top: 38%;
     }
 
+    body .wh1 a>span {
+        font-size: 2vw;
+        right: -18px;
+    }
+
+    .wh2 a>span {
+        font-size: 2vw;
+        left: -18px;
+    }
+
+    .wh3 a>span {
+        font-size: 2vw;
+        left: -18px;
+    }
+
+    .copy {
+        line-height: 14px;
+    }
+
     body .whtxt {
         margin-top: unset;
         font-size: 2.5vw;
@@ -250,6 +269,10 @@
         font-size: 2vw;
     }
 
+    #ptbx span {
+        font-size: 2vw;
+    }
+
     #ptbx2 span {
         font-size: 2vw;
     }
@@ -399,7 +422,7 @@
 
     address {
         font-size: 11px;
-        line-height: 6px;
+        line-height: 15px;
     }
 
     .emailbx {
